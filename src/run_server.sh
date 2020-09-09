@@ -1,1 +1,0 @@
-/home/abdellah/Bureau/myp-django/venv/bin/python /home/abdellah/Bureau/myp-django/src/manage.py runserver

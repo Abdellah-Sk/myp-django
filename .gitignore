@@ -2,3 +2,4 @@
 .idea/
 src/__pycache__/
 __pycache__/
+src/run_server.sh
