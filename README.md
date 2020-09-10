@@ -38,4 +38,5 @@ Projet déveloper avec:
 ## Auteurs
 Listez le(s) auteur(s) du projet ici !
 * **Abdellah Skoundri** _alias_ [@Abdellah-SK](https://github.com/Abdellah-Sk)
+* **Caroline Chatelon** _alias_ [@Rocalinecht](https://github.com/Rocalinecht)
 
