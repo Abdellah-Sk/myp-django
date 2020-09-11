@@ -33,7 +33,7 @@ Projet déveloper avec:
 
 ## Versions
 
-**Dernière version :** 0.01
+**Dernière version :** 0.0.1
 
 ## Auteurs
 Listez le(s) auteur(s) du projet ici !
