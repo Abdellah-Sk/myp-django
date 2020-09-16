@@ -13,7 +13,7 @@ class Technology(models.Model):
 class Project(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True)
     title = models.CharField(max_length=255)
-    sub_title = models.CharField(max_length=255)
+    sub_title = models.CharField(max_length=255, blank=True)
     excerpt = models.TextField(null=True)
     description = models.TextField()
     # image = models.CharField(max_length=255)
