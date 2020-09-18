@@ -14,7 +14,7 @@ class Project(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True)
     title = models.CharField(max_length=255)
     sub_title = models.CharField(max_length=255, blank=True)
-    excerpt = models.TextField(null=True)
+    excerpt = models.TextField(null=True, blank=True)
     description = models.TextField()
     # image = models.CharField(max_length=255)
     images = models.ImageField(upload_to='img')
