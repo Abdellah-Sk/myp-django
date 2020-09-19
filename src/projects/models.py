@@ -19,7 +19,7 @@ class Project(models.Model):
     # image = models.CharField(max_length=255)
     images = models.ImageField(upload_to='img')
     repo_url = models.CharField(max_length=255)
-    website_url = models.CharField(max_length=255)
+    website_url = models.CharField(max_length=255, blank=True)
     pub_date = models.DateTimeField('date published')
     technology = models.ManyToManyField(Technology)
 
