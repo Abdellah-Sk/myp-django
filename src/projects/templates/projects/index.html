@@ -10,5 +10,17 @@
 </head>
 <body>
     <h1>Hello world.</h1>
+
+    {% for project in projects %}
+    <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{project.image.url}}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{project.title}}</h5>
+            <p class="card-text">{{project.excerpt}}</p>
+            <a href="/" class="btn btn-primary">En savoir plus</a>
+        </div>
+    </div>
+    <br>
+    {% endfor %}
 </body>
 </html>
