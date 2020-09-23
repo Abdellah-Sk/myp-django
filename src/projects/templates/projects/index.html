@@ -9,7 +9,15 @@
     <link rel="stylesheet" type="text/css" href="{% static 'projects/css/style.css' %}">
 </head>
 <body>
-    <h1>Hello world.</h1>
+
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="http://127.0.0.1:8000/projects">Projects</a>
+      <a class="nav-item nav-link" href="http://127.0.0.1:8000/contact">Contact</a>
+    </div>
+  </div>
+</nav>
 
     {% for project in projects %}
     <div class="card" style="width: 18rem;">
