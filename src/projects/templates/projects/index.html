@@ -19,6 +19,8 @@
   </div>
 </nav>
 
+  <div class="container">
+  <div class="row">
     {% for project in projects %}
     <div class="card" style="width: 18rem;">
     <img class="card-img-top" src="{{project.image.url}}" alt="Card image cap">
@@ -28,7 +30,9 @@
             <a href="/" class="btn btn-primary">En savoir plus</a>
         </div>
     </div>
-    <br>
+      <hr>
     {% endfor %}
+  </div>
+  </div>
 </body>
 </html>
