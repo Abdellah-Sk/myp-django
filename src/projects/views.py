@@ -19,4 +19,3 @@ def details(request, id):
 
 def contact(request):
     return render(request, "projects/contact.html")
-
