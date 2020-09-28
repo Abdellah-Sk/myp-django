@@ -1,10 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Homepage</title>
+    <title>MYP - Make your portfolio</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'projects/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'projects/css/style.css' %}">
 </head>
+
 <body>
+
+<nav>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link" href="{% url 'home' %}">Home</a>
+      <a class="nav-item nav-link" href="{% url 'projects' %}">Projects</a>
+      <a class="nav-item nav-link" href="{% url 'contact' %}">Contact</a>
+    </div>
+  </div>
+</nav>
+
+    {% block content %}{% endblock %}
 
 </body>
 </html>
