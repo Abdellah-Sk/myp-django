@@ -8,11 +8,13 @@ def index(request):
 
 
 def projects(request):
-    return render(request, "projects/projects.html")
+    projects = Project.objects.all()
+    return render(request, "projects/projects.html", {'projects': projects})
 
 
 def details(request, id):
-    return render(request, "projects/details.html")
+    project = Project.objects.all()
+    return render(request, "projects/details.html", {'project': project[int(id)-1]})
 
 
 def contact(request):
