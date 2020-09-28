@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Detail</title>
-</head>
-<body>
-    <h1>Details</h1>
-</body>
-</html>
+{% extends 'projects/base.html' %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <h1>{{project.title}}</h1>
+    </div>
+  </div>
+
+  <div class="container">
+  <div class="row">
+    <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{project.image.url}}" alt="Card image cap">
+        <div class="card-body">
+            <p class="card-text">{{project.description}}</p>
+            <a href="{{project.repo_url}}">Lien vers le dépot distant</a><br>
+            <a href="{{project.website_url}}">Lien vers le projet en ligne</a>
+        </div>
+    </div>
+  </div>
+  </div>
+{% endblock %}
