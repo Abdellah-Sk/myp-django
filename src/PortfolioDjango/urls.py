@@ -23,10 +23,12 @@ from projects.views import index
 from projects.views import projects
 from projects.views import contact
 from projects.views import details
+from projects.views import error
 
 urlpatterns = [
     path('', index, name='home'),
     path('projects', projects, name='projects'),
+    path('error', error, name='error'),
     re_path(r'^projects/(?P<id>[0-9]+)$', details, name='details'),
     path('contact', contact, name='contact'),
     path('admin', admin.site.urls),
