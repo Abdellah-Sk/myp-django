@@ -27,13 +27,13 @@ Mot de Passe: ``admin``
 
 ## Fabriqué avec
 
-Projet déveloper avec:
+Projet développer avec:
 
 * [Django](https://www.djangoproject.com/) - Framework web Python
 
 ## Versions
 
-**Dernière version :** 0.0.1
+**Dernière version :** 0.0.2
 
 ## Auteurs
 Listez le(s) auteur(s) du projet ici !
