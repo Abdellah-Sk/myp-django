@@ -16,6 +16,9 @@
         <div class="card-body">
             <h5 class="card-title">{{project.title}}</h5>
             <p class="card-text">{{project.excerpt}}</p>
+            {% for tech in project.technology.all %}
+                <li>{{tech}}</li>
+            {% endfor %} <br>
             <a href="{% url 'details' project.id %}" class="btn btn-primary">En savoir plus</a>
         </div>
     </div>
