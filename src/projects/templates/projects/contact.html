@@ -4,13 +4,17 @@
 
   <div class="container">
     <div class="row">
-        <h1>Contact</h1>
+        <h1>Formulaire de contact</h1>
     </div>
   </div>
 
   <div class="container">
     <div class="row">
-        <p>Make the form contact with Django</p>
+        <form method="POST" class="post-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="save btn">Envoyer</button>
+        </form>
     </div>
   </div>
 

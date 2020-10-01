@@ -24,6 +24,7 @@ from projects.views import projects
 from projects.views import contact
 from projects.views import details
 from projects.views import error
+from projects.views import success
 
 urlpatterns = [
     path('', index, name='home'),
@@ -31,5 +32,6 @@ urlpatterns = [
     path('error', error, name='error'),
     re_path(r'^projects/(?P<id>[0-9]+)$', details, name='details'),
     path('contact', contact, name='contact'),
+    path('success', success, name='success'),
     path('admin', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
