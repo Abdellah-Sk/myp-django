@@ -41,5 +41,6 @@ def contact(request):
 def error(request):
     return render(request, "projects/error404.html")
 
+
 def success(request):
     return HttpResponse('Success! Thank you for your message.')
