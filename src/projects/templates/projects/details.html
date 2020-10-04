@@ -13,6 +13,9 @@
     <img class="card-img-top" src="{{project.image.url}}" alt="Card image cap">
         <div class="card-body">
             <p class="card-text">{{project.description}}</p>
+            {% for tech in project.technology.all %}
+                <li>{{tech}}</li>
+            {% endfor %} <br>
             <a href="{{project.repo_url}}">Lien vers le dépot distant</a><br>
             <a href="{{project.website_url}}">Lien vers le projet en ligne</a>
         </div>
