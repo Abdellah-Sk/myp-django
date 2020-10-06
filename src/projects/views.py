@@ -1,13 +1,12 @@
 from django.shortcuts import render, redirect
-from django.core.mail import send_mail, BadHeaderError, EmailMessage
+from django.core.mail import BadHeaderError, EmailMessage
 from django.http import HttpResponse
-from django.conf import settings
 from .models import Project
 from .form import ContactForm
 
 
 def index(request):
-    projects = Project.objects.all()
+    projects = Project.objects.all()[:3]
     return render(request, "projects/index.html", {'projects': projects})
 
 
