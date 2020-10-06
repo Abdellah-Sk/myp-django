@@ -3,3 +3,4 @@
 src/__pycache__/
 __pycache__/
 src/run_server.sh
+src/PortfolioDjango/.env
