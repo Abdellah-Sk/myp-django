@@ -4,3 +4,5 @@ src/__pycache__/
 __pycache__/
 src/run_server.sh
 src/PortfolioDjango/.env
+/node_modules/
+/package-lock.json
