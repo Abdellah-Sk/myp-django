@@ -23,13 +23,18 @@ from projects.views import index
 from projects.views import projects
 from projects.views import contact
 from projects.views import details
-from projects.views import error
+from projects.views import error404
+from projects.views import error500
 from projects.views import success
+
+handler404 = 'projects.views.error404'
+handler500 = 'projects.views.error500'
 
 urlpatterns = [
     path('', index, name='home'),
     path('projects', projects, name='projects'),
-    path('error', error, name='error'),
+    path('error404', error404, name='error404'),
+    path('error500', error500, name='error500'),
     re_path(r'^projects/(?P<id>[0-9]+)$', details, name='details'),
     path('contact', contact, name='contact'),
     path('success', success, name='success'),
