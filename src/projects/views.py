@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.core.mail import BadHeaderError, EmailMessage
 from django.http import HttpResponse
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import Project
 from .form import ContactForm
 
@@ -12,7 +13,17 @@ def index(request):
 
 def projects(request):
     projects = Project.objects.all()
-    return render(request, "projects/projects.html", {'projects': projects})
+    paginator = Paginator(projects, 5)  # Show 5 contacts per page.
+    page = request.GET.get('page', 1)
+
+    try:
+        x = paginator.page(page)
+    except PageNotAnInteger:
+        x = paginator.page(1)
+    except EmptyPage:
+        x = paginator.page(paginator.num_pages)
+
+    return render(request, "projects/projects.html", {'x': x})
 
 
 def details(request, id):
@@ -45,8 +56,12 @@ def contact(request):
     return render(request, "projects/contact.html", {'form': form})
 
 
-def error(request):
-    return render(request, "projects/error404.html")
+def error404(request, exception):
+    return render(request, "projects/errors/error404.html", {}, status=404)
+
+
+def error500(request):
+    return render(request, "projects/errors/error500.html", {}, status=500)
 
 
 def success(request):

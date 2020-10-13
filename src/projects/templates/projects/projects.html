@@ -10,14 +10,16 @@
 
   <div class="container">
   <div class="row">
-    {% for project in projects %}
+    {% for project in x %}
     <div class="card" style="width: 18rem;">
     <img class="card-img-top" src="{{project.image.url}}" alt="Card image cap">
         <div class="card-body">
             <h5 class="card-title">{{project.title}}</h5>
             <p class="card-text">{{project.excerpt}}</p>
             {% for tech in project.technology.all %}
-                <li>{{tech}}</li>
+                {% if forloop.first %}
+                    <li>{{tech}}</li>
+                {% endif %}
             {% endfor %} <br>
             <a href="{% url 'details' project.id %}" class="btn btn-primary">En savoir plus</a>
         </div>
@@ -26,5 +28,26 @@
     {% endfor %}
   </div>
   </div>
+{% if x.has_other_pages %}
+  <ul class="pagination">
+    {% if x.has_previous %}
+      <li><a href="?page={{ x.previous_page_number }}">&laquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&laquo;</span></li>
+    {% endif %}
+    {% for i in x.paginator.page_range %}
+      {% if x.number == i %}
+        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
+      {% else %}
+        <li><a href="?page={{ i }}">{{ i }}</a></li>
+      {% endif %}
+    {% endfor %}
+    {% if x.has_next %}
+      <li><a href="?page={{ x.next_page_number }}">&raquo;</a></li>
+    {% else %}
+      <li class="disabled"><span>&raquo;</span></li>
+    {% endif %}
+  </ul>
+{% endif %}
 
 {% endblock %}
