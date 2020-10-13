@@ -9,9 +9,11 @@
 
   <div class="container">
   <div class="row">
-      <h2>Abdellah Skoundri</h2>
+      <h2>{{ user.get_full_name }}</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur doloribus dolorum, ducimus earum ex
           expedita impedit magni maxime natus. Accusantium at culpa dolor eligendi molestiae quaerat sint sit velit.</p>
+      <p>{{ user.profile.linkedin }}</p>
+      <p>{{ user.profile.github }}</p>
   </div>
 
   </div>

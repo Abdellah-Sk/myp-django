@@ -8,6 +8,14 @@
     </div>
   </div>
 
+    <h2>{{ user.get_full_name }}</h2>
+        <ul>
+          <li>{{ user.username }}</li>
+          <li>{{ user.profile.phone }}</li>
+          <li>{{ user.profile.linkedin }}</li>
+          <li>{{ user.profile.github }}</li>
+        </ul>
+
   <div class="container">
     <div class="row">
         <form method="POST" class="post-form">
