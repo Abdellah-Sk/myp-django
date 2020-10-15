@@ -21,6 +21,7 @@ class Project(models.Model):
     repo_url = models.CharField(max_length=255)
     website_url = models.CharField(max_length=255, blank=True)
     pub_date = models.DateTimeField('date published')
+    favoris = models.BooleanField(null=True)
     technology = models.ManyToManyField(Technology)
 
     def __str__(self):
@@ -44,6 +45,3 @@ class Profile(models.Model):
 
     def __str__(self):
         return str(self.user)
-
-
-
