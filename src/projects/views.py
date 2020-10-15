@@ -7,12 +7,12 @@ from .form import ContactForm
 
 
 def index(request):
-    projects = Project.objects.all()[:3]
+    projects = Project.objects.all()
     return render(request, "projects/index.html", {'projects': projects})
 
 
 def projects(request):
-    projects = Project.objects.all()
+    projects = list(reversed(Project.objects.all()))
     paginator = Paginator(projects, 5)  # Show 5 contacts per page.
     page = request.GET.get('page', 1)
 
