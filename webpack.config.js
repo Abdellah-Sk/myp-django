@@ -14,7 +14,6 @@ module.exports = {
         })
     ],
     module: {
-    module: {
         rules: [{
             test: /\.scss$/,
             use: [
