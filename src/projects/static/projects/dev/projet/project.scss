@@ -1,0 +1,86 @@
+// @import "navbar.scss";
+@import "../variables.scss";
+
+
+section{
+    .all_projects{
+        margin: 5% 0 0 5%;
+        display: flex;
+        flex-direction: column;
+        @media #{$medium-up}{
+            margin: 0;
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+        }
+        .box_project{
+            padding: 2em;
+            width: 100%;
+            vertical-align: middle;
+            display: flex;
+            @media #{$medium-up}{
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                padding: auto;
+            }
+            img{
+                z-index: 1;
+                position: relative;
+                width: 530px; 
+                height:350px;
+                border-radius: 15px;
+                @media #{$medium-up}{
+                    width: 250px;
+                    height: auto;
+                }
+            }
+            .projet_contents{
+                background-color: $color_primary;
+                z-index:2;
+                width: 35%;
+                padding: 2em;
+                margin-top: 0;
+                position: absolute;
+                text-align: start;
+                align-content: center;
+                margin-left: 35%;
+                margin-top: 5%;
+                @media #{$medium-up}{
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 0;
+                    position: relative;
+                    width: 88.01%;
+                }
+                .projet_name{
+                    color: $background;
+                    font-size: 1.5em;
+                    font-weight: 700;
+                }
+                .projet_description{
+                    color: $background;
+                    font-size: 0.8em;
+                }
+                .projet_linkPage{
+                    font-style: oblique;
+                    color: $background;
+                }
+            }
+        }
+        .right{
+            img{
+                margin-left: 45%;
+                @media #{$medium-up}{
+                    margin-left: 0;
+                }
+            }
+            .projet_contents{
+                margin-left: 17%;
+                @media #{$medium-up}{
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}    

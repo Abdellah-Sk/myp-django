@@ -1,0 +1,198 @@
+@import "navbar.scss";
+@import "../variables.scss";
+
+// -> PAGE ACCUEIL
+.container {
+    // border:2px solid rebeccapurple;
+    width: 80%;
+    position: relative;
+    z-index: 3;
+    margin-top: 1%;
+    margin-left: 17%;
+    @media #{$medium-up}{ 
+        margin-left:none;
+    }
+    // Header
+    .header{
+        display: flex;
+        align-items: center;
+        @media #{$medium-up}{ 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .profil_picture{
+            height: 550px;
+            width: auto;
+            border-radius: 13px;
+            margin-right: 3%;
+            box-shadow: 14px 15px 31px #F2F2F2;
+            @media #{$medium-up}{
+                height: 350px !important; 
+                width: 250px !important;  
+            }
+        }
+        .hr_title{
+            margin-top: -50%;
+            @media #{$medium-up}{ 
+                position: absolute;
+                margin-top: 5%;
+                margin-left: -180px;
+            }
+        }
+        div{
+            // width: 50%;
+            display: flex;
+            justify-content: start;
+            flex-direction: column;
+            margin-left: 2%;
+            // border:2px solid red;
+            @media #{$medium-up}{ 
+                width: auto;
+                text-align: center;
+                margin-top: 7%;
+            }
+            p{font-size: 0.75em;}
+        } 
+    }
+    .view_project{
+        position: absolute;
+        margin-left: 100%;
+        margin-top: -10%;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        @media #{$medium-up}{display: none;}
+        span{
+            text-transform: uppercase;
+            font-size: small;
+            color:$color_primary;
+            font-weight: normal;
+        }
+    }
+    // Projet
+    section{
+        .title_work{margin-top: 10%;}
+        .projets_all{
+            flex-direction: column;
+            // border:3px solid royalblue;
+            width: 100%;
+            margin-bottom: 10%;
+            margin-top: 5%;
+
+            .box{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                // border:2px solid brown;
+                .box1,.box2{
+                    // border:2px solid yellow;
+                    width: auto;
+                    margin:5%;
+                    .image{
+                        position: relative;
+                        margin: 7%;
+                        background-size: contain;
+                        background-clip: content-box;
+                        border-radius: 20px;
+                        background-position: center;
+                        overflow: hidden;
+                    }
+                    .image__title{
+                        position: absolute;
+                        left: 0px;
+                        right: 0;
+                        bottom: 0;
+                        height: 100%;
+                        width: 100%;
+                        margin-left: 0;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: flex-end;
+                        background-color: $color_primary;
+                        opacity: 0;
+                        transition: all 0.4s ease 0s; 
+                        p{
+                            color: white;
+                            font-size: 1.5em;
+                            font-weight: 700;
+                            padding: 1em;
+                        }
+                    }
+                    .image:hover .image__title{
+                        opacity: 0.80;
+                    }                      
+                }
+                .box1{ justify-content: flex-end;}
+                .box2{ 
+                    display:flex; 
+                    flex-direction: column;
+                    justify-content: center; 
+                    align-items: center;
+                    }
+                .projet1{
+                    width: 440px;
+                    height: 285px;
+                    // border:2px solid darkblue;
+                   
+                }
+                .projet2{
+                    width: 350px;
+                    height: 240px;
+                    // border:2px solid orangered;
+                    margin-left: 29% !important;
+                }
+                .projet3{
+                    width: 265px;
+                    height: 350px;
+                    // border:2px solid darkgreen;
+                }
+                .all_project{
+                    width: 200px;
+                    height: 70px;
+                    background-color: $color_primary;
+                    padding: 1em;
+                    // margin: 5%;
+                    margin-top: 50px;
+                    margin-bottom: 20px;
+
+                    border-radius: 12px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    p{
+                        color: white;
+                        font-size: 1.5em;
+                        font-weight: 700;
+                    }
+                }
+
+            }
+        }    
+        }         
+    }
+    // Contact
+     section{
+        .title-contact{
+            margin-left: 40%;
+        }
+        .intro_contact{
+            // border:2px solid rebeccapurple;
+            margin: 10% 5%;
+            text-align: center;
+            padding: 1em;
+            p{
+                font-size: 1.5em;
+                font-weight: 700;
+                span:hover{
+                    text-decoration: underline;
+                    color: $color_primary;
+                }
+            }
+        }
+    }
+
+
+
+

@@ -1,0 +1,117 @@
+// Color 
+$border: #F7F7F7;
+$background: #FFFFFF;
+$color_primary: rgb(15, 76, 129);
+$shadow_title: #C9C9C9C9;
+
+// Responsive
+$medium-up:"only screen and (max-width: 768px)";
+
+// Elements de base
+body, html {
+    height: 100%;
+    margin: 0;
+}
+h1,h2,h3,p{
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+hr{
+    border:4px solid $color_primary;
+    width: 53px;
+}
+.project{
+    margin-bottom: -4%;
+    margin-left: 2.5%;
+    @media #{$medium-up}{
+        margin-bottom: -10%;
+        margin-left: -15%;
+    }
+}
+
+h1{
+    font-weight: 900;
+    font-size: 4em;
+    @media #{$medium-up}{font-size: 3em;}
+}
+
+.titles{
+    margin-top: 5%;
+    padding-left: 100px;
+    // border:2px solid red;
+    hr{
+        margin-top: 2.5% ;
+        margin-left: -100px;
+        position: absolute;
+        @media #{$medium-up}{
+            margin-right: 105px;
+            width: 43px;
+        }
+    }
+    h2{
+        font-size: 3.5em ;
+        font-weight: 800;
+        position: absolute;
+        letter-spacing: 0.1em;
+        z-index: 2;
+        @media #{$medium-up}{
+            font-size: 2.3em;
+            text-align: start;
+            letter-spacing: none;
+        }
+    }
+    span{
+        color: $shadow_title;
+        font-size: 3.5em;
+        font-weight: 800;
+        opacity: 0.4;
+        margin-left: 15px;
+        z-index: 1;
+        letter-spacing: 0.1em;
+        @media #{$medium-up}{
+            font-size: 2em; 
+            text-align: start;
+        }
+    }    
+}
+h3{    
+    font-weight: 600;
+    font-size: 1.35em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 5%;
+    @media #{$medium-up}{
+        font-size: 1em; 
+        margin-bottom: 10%;
+    }
+}
+
+button{
+    border:2px solid lightgray;
+    background-color: $background;
+    border-radius: 50px;
+    padding:0 1.5em 0 1.5em;
+    width: 110px !important;
+    height: 35px;
+    margin-top: 5%;
+    &:hover{
+        background-color: $color_primary;
+        color: white;
+        border:none;
+    }
+    @media #{$medium-up}{margin: 10%;}
+
+}
+
+
+ion-icon {
+    font-size: 25px;
+    color: white;
+    margin-right: 15px;
+    // margin-top: 15px;
+  }
+
+.animate__animated{
+    --animate-duration: 3s;
+    // --animate-delay: 5s;
+}  
