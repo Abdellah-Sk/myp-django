@@ -5,23 +5,65 @@
     <title>MYP - Make your portfolio</title>
     {% load static %}
     <link rel="stylesheet" type="text/css" href="{% static 'projects/dist/main.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
 
-<nav>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link" href="{% url 'home' %}">Home</a>
-      <a class="nav-item nav-link" href="{% url 'projects' %}">Projects</a>
-      <a class="nav-item nav-link" href="{% url 'contact' %}">Contact</a>
-    </div>
-  </div>
-</nav>
+    <nav>
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'projects' %}">Projects</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+    </nav>
 
-    {% block content %}{% endblock %}
+    <main>
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
 
 
+    <footer>
+        <a href="/">
+            <div class="logo">
+                <span class="circle">A</span>
+                <span><p>Abdellah Skoundri</p></span>
+            </div>
+        </a>
+
+        {% for user in users %}
+        <div class="link">
+            <div class='item_logo'> <a href="{{ user.linkedin }}"><img src="{% static 'projects/img/Icon-github.png' %}"/></a></div>
+            <div class='item_logo'> <a href="{{ user.github }}"><img src="{% static 'projects/img/Icon-github.png' %}"/></a></div>
+        </div>
+        {% endfor %}
+
+        <div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/project">Projet</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+             <div class="make_myp">
+                <p>Make with MYP <b> __</b></p>
+            </div>
+        </div>
+    </footer>
+
+
+    {% block javascripts %}
     <script src="{% static 'projects/dist/bundle.js' %}"></script>
+    <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    {% endblock %}
+
 </body>
+
 </html>

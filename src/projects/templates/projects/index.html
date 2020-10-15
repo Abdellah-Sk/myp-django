@@ -23,14 +23,16 @@
       <hr>
 
     {% for project in projects %}
-    <div class="card" style="width: 18rem;">
+      {% if project.favoris is True %}
+        <div class="card" style="width: 18rem;">
         <div class="card-body">
             <h5 class="card-title">{{project.title}}</h5>
             <p class="card-text">{{project.excerpt}}</p>
             <a href="{% url 'details' project.id %}" class="btn btn-primary">En savoir plus</a>
         </div>
-    </div>
-      <hr>
+        </div>
+        <hr>
+      {% endif%}
     {% endfor %}
   </div>
   </div>
