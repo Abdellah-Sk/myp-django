@@ -2,19 +2,14 @@
 
 {% block content %}
 
-  <div class="container">
-    <div class="row">
-        <h1>Formulaire de contact</h1>
+<section class="content_contact">
+    <div class="information">
+        <p>Pour une question où juste envie <br/> d'une discution</p>
+            <div>
+                <span><ion-icon name="mail-outline" class="icon_contact"></ion-icon>{{ user.email }}</span>
+                <span><ion-icon name="call-outline" class="icon_contact phone"></ion-icon>{{ user.profile.phone }}</span>
+            </div>
     </div>
-  </div>
-
-    <h2>{{ user.get_full_name }}</h2>
-        <ul>
-          <li>{{ user.username }}</li>
-          <li>{{ user.profile.phone }}</li>
-          <li>{{ user.profile.linkedin }}</li>
-          <li>{{ user.profile.github }}</li>
-        </ul>
 
   <div class="container">
     <div class="row">
@@ -25,5 +20,7 @@
         </form>
     </div>
   </div>
+
+</section>>
 
 {% endblock %}
