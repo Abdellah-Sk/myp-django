@@ -1,22 +1,24 @@
 {% extends 'projects/base.html' %}
 
 {% block content %}
-  <div class="container">
-  <div class="row">
-      <h1>Bienvenu sur mon portfolio</h1>
-  </div>
-  </div>
+    {# Header #}
+    <section class="header animate__animated animate__fadeInLeft">
+        <img class="profil_picture" src=''/>
+            <span>
+                <hr class='hr_title'>
+            </span>
+        <div >
+            <h1 >{{ user.get_full_name }}</h1>
+            <h3>développeur web et mobile</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac tempor nibh. Sed et elementum mi. Etiam mattis faucibus mi et consequat. Vivamus at elementum diam. Nunc dignissim sodales purus ut egestas. Cras pulvinar mauris nec nisi pulvinar, et laoreet ligula cursus. Proin quis nulla ut leo consectetur posuere. Maecenas ac consequat sapien, quis rhoncus ipsum. Vivamus mattis iaculis volutpat. Duis euismod pharetra felis, id finibus arcu tempus vel. Nam vel semper libero. Pellentesque consequat viverra velit, vitae congue odio consectetur quis. Nunc venenatis neque nec leo laoreet semper. Phasellus rhoncus quam nec ex aliquam laoreet. Integer at diam bibendum, laoreet eros sed, consectetur lectus.</p>
+        </div>
+    </section>
 
-  <div class="container">
-  <div class="row">
-      <h2>{{ user.get_full_name }}</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi aspernatur doloribus dolorum, ducimus earum ex
-          expedita impedit magni maxime natus. Accusantium at culpa dolor eligendi molestiae quaerat sint sit velit.</p>
-      <p>{{ user.profile.linkedin }}</p>
-      <p>{{ user.profile.github }}</p>
-  </div>
+    <div class="view_project">
+        <span>voir les projets</span>
+        <img  src=''/>
+    </div>
 
-  </div>
   <div class="container">
   <div class="row">
       <h2>Mes projets</h2>
@@ -31,9 +33,38 @@
             <a href="{% url 'details' project.id %}" class="btn btn-primary">En savoir plus</a>
         </div>
         </div>
-        <hr>
       {% endif%}
     {% endfor %}
   </div>
   </div>
+
+{# Invitation page Contact #}
+<section>
+    <div class="titles title-contact"
+        data-aos="fade-left"
+        data-aos-duration="3000"
+        data-aos-easing="ease-in-sine">
+        <hr class=""/>
+        <div class="title_h2">
+            <h2>Ca vous à plus?</h2>
+            <span>Ca vous à plus?</span>
+        </div>
+    </div>
+    <div class="intro_contact">
+        <p >Ceci n'est que le début, j'ai encore pleins de chose à montrer. <br/>
+        N'hésiter pas à aller voir ce qui se cache <a href="/project"><span>ici</span>?</a></p>
+    </div>
+</section>
+   {# Invitation page Contact #}
+    <h2>
+        <div class="intro_contact">
+            {# <hr/> #}
+            <div class="title_h2 title_contact" >
+                <h2>Ça vous à plus?</h2>
+                <span>Ça vous à plus?</span>
+            </div>
+            <p class="intro_contact-text">Ceci n'est que le début, j'ai encore pleins de chose à montrer.. T"est aller voir ce qui se cache <a href="/projects">ici ?</a></p>
+        </div>
+    </h2>
+
 {% endblock %}
