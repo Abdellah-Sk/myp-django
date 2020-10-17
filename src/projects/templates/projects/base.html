@@ -11,6 +11,18 @@
 </head>
 
 <body>
+    <header>
+        <a href="/">
+            <div class="logo">
+                <span class="circle">A</span>
+                <span><p>{{ user.get_full_name }}</p></span>
+            </div>
+        </a>
+        <div class="link">
+            <div class='item_logo'> <a href="{{ user.profile.github }}"><img src="{% static 'projects/img/Icon-github.png' %}"/><span>Linkedin</span></a></div>
+            <div class='item_logo'> <a href="{{ user.profile.linkedin }}"><img src="{% static 'projects/img/Icon-linkedin.png' %}"/><span>Github</span></a></div>
+        </div>
+    </header>
 
     <nav>
         <ul>
@@ -31,16 +43,14 @@
         <a href="/">
             <div class="logo">
                 <span class="circle">A</span>
-                <span><p>Abdellah Skoundri</p></span>
+                <span><p>{{ user.get_full_name }}</p></span>
             </div>
         </a>
 
-        {% for user in users %}
         <div class="link">
-            <div class='item_logo'> <a href="{{ user.linkedin }}"><img src="{% static 'projects/img/Icon-github.png' %}"/></a></div>
-            <div class='item_logo'> <a href="{{ user.github }}"><img src="{% static 'projects/img/Icon-github.png' %}"/></a></div>
+            <div class='item_logo'> <a href="{{ user.profile.github }}"><img src="{% static 'projects/img/Icon-github.png' %}"/></a></div>
+            <div class='item_logo'> <a href="{{ user.profile.linkedin }}"><img src="{% static 'projects/img/Icon-linkedin.png' %}"/></a></div>
         </div>
-        {% endfor %}
 
         <div>
             <ul>
@@ -55,7 +65,7 @@
     </footer>
 
 
-    {% block javascripts %}
+    {% block javascript %}
     <script src="{% static 'projects/dist/bundle.js' %}"></script>
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
