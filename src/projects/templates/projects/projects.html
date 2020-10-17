@@ -2,32 +2,33 @@
 
 {% block content %}
 
-  <div class="container">
-    <div class="row">
-        <h1>Projets</h1>
+<section>
+    <div class="titles">
+        <hr class=""/>
+        <div class="title_h2">
+            <h2>Mes projets</h2>
+            <span>Mes projets</span>
+        </div>
     </div>
-  </div>
 
-  <div class="container">
-  <div class="row">
+    <div class="all_projects">
+
     {% for project in x %}
-    <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="{{project.image.url}}" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">{{project.title}}</h5>
-            <p class="card-text">{{project.excerpt}}</p>
+    <img class="" src="{{project.image.url}}" alt="">
+        <div class="project_contents">
+            <p class="projet_name">{{project.title}}</p>
+            <p class="projet_description">{{project.excerpt}}</p>
             {% for tech in project.technology.all %}
                 {% if forloop.first %}
                     <li>{{tech}}</li>
                 {% endif %}
             {% endfor %} <br>
-            <a href="{% url 'details' project.id %}" class="btn btn-primary">En savoir plus</a>
+            <a href="{% url 'details' project.id %}" class="projet_linkPage">En savoir plus</a>
         </div>
-    </div>
-      <hr>
     {% endfor %}
-  </div>
-  </div>
+    </div>
+</section>
+
 {% if x.has_other_pages %}
   <ul class="pagination">
     {% if x.has_previous %}
