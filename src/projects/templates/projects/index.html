@@ -32,29 +32,44 @@
         </div>
  
         <div class="projets_all">
-            <div class="row">
-                <h2>Mes projets</h2>
-                <hr>
-                
-                <div class="">
-                    <h2>{{project1.title}}</h2>
-                    <p>{{project1.excerpt}}</p>
-                    <a href="{% url 'details' project1.id %}" class="btn btn-primary">En savoir plus</a>
+            <div class="box">  
+                <div class="box1">
+                    {# projet 1 #}
+                    <div class="projet projet1 image">
+                        <a href="{% url 'details' project1.id %}" >
+                            <div class="image__title">
+                                <p class="projet_name">{{project1.title}}</p>
+                                {# <p>{{project1.excerpt}}</p> #}
+                            </div>
+                        </a>
+                    </div>
+                    {# projet 2 #}               
+                    <div class="projet projet2 image">
+                        <a href="{% url 'details' project2.id %}" >
+                        <div class="image__title">  
+                            <p class="projet_name">{{project2.title}}</p>
+                            {# <p>{{project2.excerpt}}</p> #}
+                        </div>  
+                        </a>  
+                    </div>
                 </div>
-                
-                <div class="">
-                    <h2>{{project2.title}}</h2>
-                    <p>{{project2.excerpt}}</p>
-                    <a href="{% url 'details' project2.id %}" class="btn btn-primary">En savoir plus</a>
-                </div>
-                
-                <div class="">
-                    <h2>{{project3.title}}</h2>
-                    <p>{{project3.excerpt}}</p>
-                    <a href="{% url 'details' project3.id %}" class="btn btn-primary">En savoir plus</a>
-                </div>
+                <div class="box2">
+                    <a href="/project">
+                        <div class="all_project">
+                            <p>En voir plus </p>
+                        </div>
+                    </a>
+                    {# projet 3 #}
+                    <div class="projet projet3 image">
+                        <a href="{% url 'details' project3.id %}" >
+                        <div class="image__title">                       
+                            <p class="projet_name">{{project3.title}}</p>
+                            {# <p>{{project3.excerpt}}</p> #}
+                            </a>
+                        </div>
+                    </div>
+                </div>    
             </div>
-        </div>
     </section>
 <<<<<<< HEAD
 
