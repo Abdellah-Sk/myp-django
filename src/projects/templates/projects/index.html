@@ -1,9 +1,10 @@
 {% extends 'projects/base.html' %}
 
 {% block content %}
+{% load static %}
     {# Header #}
     <section class="header animate__animated animate__fadeInLeft">
-        <img class="profil_picture" src=''/>
+        <img class="profil_picture" src="{% static 'projects/img/profile.jpg' %}"/>
             <span>
                 <hr class='hr_title'>
             </span>
@@ -16,38 +17,43 @@
 
     <div class="view_project">
         <span>voir les projets</span>
-        <img  src=''/>
+        <img  src="{% static 'projects/img/icon-arrow.png' %}"/>
     </div>
-
-  <div class="container">
-  <div class="row">
-      <h2>Mes projets</h2>
-      <hr>
-
-    {% for project in projects %}
-      {% if project.favoris is True %}
-        <div class="card" style="width: 18rem;">
-        <div class="card-body">
-            <h5 class="card-title">{{project.title}}</h5>
-            <p class="card-text">{{project.excerpt}}</p>
-            <a href="{% url 'details' project.id %}" class="btn btn-primary">En savoir plus</a>
+    {# WORK #}
+    <section ><br> 
+        <div class="titles title_work" 
+             data-aos="fade-right" 
+             data-aos-duration="1000"
+             data-aos-easing="ease-in-sine">
+            <hr class="project"/>
+            <div class="title_h2">
+                <h2>Work work work ...</h2>
+            </div>       
         </div>
+ 
+        <div class="all_projects">
+            {% for project in projects %}
+            {% if project.favoris is True %}
+                <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{project.title}}</h5>
+                    <p class="card-text">{{project.excerpt}}</p>
+                    <a href="{% url 'details' project.id %}" class="btn btn-primary">En savoir plus</a>
+                </div>
+                </div>
+            {% endif%}
+            {% endfor %}
         </div>
-      {% endif%}
-    {% endfor %}
-  </div>
-  </div>
-
+    </section>
 {# Invitation page Contact #}
 <section>
     <div class="titles title-contact"
         data-aos="fade-left"
-        data-aos-duration="3000"
+        data-aos-duration="1000"
         data-aos-easing="ease-in-sine">
         <hr class=""/>
         <div class="title_h2">
             <h2>Ca vous à plus?</h2>
-            <span>Ca vous à plus?</span>
         </div>
     </div>
     <div class="intro_contact">
@@ -55,16 +61,4 @@
         N'hésiter pas à aller voir ce qui se cache <a href="/project"><span>ici</span>?</a></p>
     </div>
 </section>
-   {# Invitation page Contact #}
-    <h2>
-        <div class="intro_contact">
-            {# <hr/> #}
-            <div class="title_h2 title_contact" >
-                <h2>Ça vous à plus?</h2>
-                <span>Ça vous à plus?</span>
-            </div>
-            <p class="intro_contact-text">Ceci n'est que le début, j'ai encore pleins de chose à montrer.. T"est aller voir ce qui se cache <a href="/projects">ici ?</a></p>
-        </div>
-    </h2>
-
 {% endblock %}

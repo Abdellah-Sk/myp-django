@@ -2,7 +2,7 @@ body, html {
   height: 100%;
   margin: 0; }
 
-h1, h2, h3, p {
+h1, h2, h3, p, a, span {
   color: black;
   font-family: 'Roboto', sans-serif; }
 
@@ -20,7 +20,8 @@ hr {
 
 h1 {
   font-weight: 900;
-  font-size: 4em; }
+  font-size: 4em;
+  margin-bottom: 0; }
   @media only screen and (max-width: 768px) {
     h1 {
       font-size: 3em; } }
@@ -30,7 +31,7 @@ h1 {
   padding-left: 100px; }
   .titles hr {
     margin-top: 2.5%;
-    margin-left: -100px;
+    margin-left: -90px;
     position: absolute; }
     @media only screen and (max-width: 768px) {
       .titles hr {
@@ -39,26 +40,14 @@ h1 {
   .titles h2 {
     font-size: 3.5em;
     font-weight: 800;
-    position: absolute;
     letter-spacing: 0.1em;
-    z-index: 2; }
+    z-index: 2;
+    text-shadow: 10px 10px 0px rgba(239, 239, 239, 0.85); }
     @media only screen and (max-width: 768px) {
       .titles h2 {
         font-size: 2.3em;
         text-align: start;
         letter-spacing: none; } }
-  .titles span {
-    color: #C9C9C9C9;
-    font-size: 3.5em;
-    font-weight: 800;
-    opacity: 0.4;
-    margin-left: 15px;
-    z-index: 1;
-    letter-spacing: 0.1em; }
-    @media only screen and (max-width: 768px) {
-      .titles span {
-        font-size: 2em;
-        text-align: start; } }
 
 h3 {
   font-weight: 600;
@@ -99,7 +88,7 @@ body, html {
   height: 100%;
   margin: 0; }
 
-h1, h2, h3, p {
+h1, h2, h3, p, a, span {
   color: black;
   font-family: 'Roboto', sans-serif; }
 
@@ -117,7 +106,8 @@ hr {
 
 h1 {
   font-weight: 900;
-  font-size: 4em; }
+  font-size: 4em;
+  margin-bottom: 0; }
   @media only screen and (max-width: 768px) {
     h1 {
       font-size: 3em; } }
@@ -127,7 +117,7 @@ h1 {
   padding-left: 100px; }
   .titles hr {
     margin-top: 2.5%;
-    margin-left: -100px;
+    margin-left: -90px;
     position: absolute; }
     @media only screen and (max-width: 768px) {
       .titles hr {
@@ -136,26 +126,14 @@ h1 {
   .titles h2 {
     font-size: 3.5em;
     font-weight: 800;
-    position: absolute;
     letter-spacing: 0.1em;
-    z-index: 2; }
+    z-index: 2;
+    text-shadow: 10px 10px 0px rgba(239, 239, 239, 0.85); }
     @media only screen and (max-width: 768px) {
       .titles h2 {
         font-size: 2.3em;
         text-align: start;
         letter-spacing: none; } }
-  .titles span {
-    color: #C9C9C9C9;
-    font-size: 3.5em;
-    font-weight: 800;
-    opacity: 0.4;
-    margin-left: 15px;
-    z-index: 1;
-    letter-spacing: 0.1em; }
-    @media only screen and (max-width: 768px) {
-      .titles span {
-        font-size: 2em;
-        text-align: start; } }
 
 h3 {
   font-weight: 600;
@@ -237,22 +215,24 @@ header {
     display: flex;
     flex-direction: column;
     width: 80%;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-left: 10%;
     margin-top: 35px;
     margin-bottom: 0; }
     header .link .item_logo {
       margin-bottom: 7%;
-      display: flex; }
+      display: flex;
+      vertical-align: middle; }
       header .link .item_logo img {
         margin-right: 20px;
-        height: 70%; }
+        height: 70%;
+        vertical-align: middle; }
         @media only screen and (max-width: 768px) {
           header .link .item_logo img {
             margin-right: 0px; } }
       header .link .item_logo span {
         font-family: 'Roboto', sans-serif;
-        font-weight: 800;
+        font-weight: 700;
         font-size: 1.25em;
         text-decoration: none;
         color: black; }
@@ -261,24 +241,27 @@ header {
             display: none; } }
 
 nav {
-  height: 70px;
+  height: 80px;
   position: relative;
   z-index: 1;
-  top: 0;
-  width: 25%;
-  right: -75%;
+  top: 15px;
+  width: 100%;
   display: flex;
-  justify-content: end !important;
-  align-items: center; }
+  justify-content: flex-end !important;
+  align-items: center;
+  vertical-align: middle; }
   @media only screen and (max-width: 768px) {
     nav {
       width: auto;
       right: -1%; } }
-  nav li {
-    display: inline;
-    list-style: none;
-    text-align: end !important;
-    margin: 20px; }
+  nav ul {
+    margin-right: 5%; }
+    nav ul li {
+      display: inline;
+      list-style: none;
+      text-align: end !important;
+      margin: 20px;
+      font-size: 1.3em; }
 
 a {
   color: black;
@@ -364,7 +347,7 @@ body, html {
   height: 100%;
   margin: 0; }
 
-h1, h2, h3, p {
+h1, h2, h3, p, a, span {
   color: black;
   font-family: 'Roboto', sans-serif; }
 
@@ -382,7 +365,8 @@ hr {
 
 h1 {
   font-weight: 900;
-  font-size: 4em; }
+  font-size: 4em;
+  margin-bottom: 0; }
   @media only screen and (max-width: 768px) {
     h1 {
       font-size: 3em; } }
@@ -392,7 +376,7 @@ h1 {
   padding-left: 100px; }
   .titles hr {
     margin-top: 2.5%;
-    margin-left: -100px;
+    margin-left: -90px;
     position: absolute; }
     @media only screen and (max-width: 768px) {
       .titles hr {
@@ -401,26 +385,14 @@ h1 {
   .titles h2 {
     font-size: 3.5em;
     font-weight: 800;
-    position: absolute;
     letter-spacing: 0.1em;
-    z-index: 2; }
+    z-index: 2;
+    text-shadow: 10px 10px 0px rgba(239, 239, 239, 0.85); }
     @media only screen and (max-width: 768px) {
       .titles h2 {
         font-size: 2.3em;
         text-align: start;
         letter-spacing: none; } }
-  .titles span {
-    color: #C9C9C9C9;
-    font-size: 3.5em;
-    font-weight: 800;
-    opacity: 0.4;
-    margin-left: 15px;
-    z-index: 1;
-    letter-spacing: 0.1em; }
-    @media only screen and (max-width: 768px) {
-      .titles span {
-        font-size: 2em;
-        text-align: start; } }
 
 h3 {
   font-weight: 600;
@@ -458,7 +430,7 @@ ion-icon {
   --animate-duration: 3s; }
 
 .container {
-  width: 80%;
+  width: 75%;
   position: relative;
   z-index: 3;
   margin-top: 1%;
@@ -485,14 +457,18 @@ ion-icon {
         .container .header .profil_picture {
           height: 350px !important;
           width: 250px !important; } }
-    .container .header .hr_title {
-      margin-top: -50%; }
-      @media only screen and (max-width: 768px) {
-        .container .header .hr_title {
-          position: absolute;
-          margin-top: 5%;
-          margin-left: -180px; } }
+    .container .header span {
+      border: 2px solid transparent;
+      margin-bottom: 15%; }
+      .container .header span .hr_title {
+        margin-top: 35%; }
+        @media only screen and (max-width: 768px) {
+          .container .header span .hr_title {
+            position: absolute;
+            margin-top: 14%;
+            margin-left: -7%; } }
     .container .header div {
+      width: 70%;
       display: flex;
       justify-content: start;
       flex-direction: column;
@@ -503,7 +479,8 @@ ion-icon {
           text-align: center;
           margin-top: 7%; } }
       .container .header div p {
-        font-size: 0.75em; }
+        font-size: 0.75em;
+        width: 80%; }
   .container .view_project {
     position: absolute;
     margin-left: 100%;
@@ -597,6 +574,11 @@ ion-icon {
 
 section .title-contact {
   margin-left: 40%; }
+  @media only screen and (max-width: 768px) {
+    section .title-contact {
+      margin-left: 20%; } }
+  section .title-contact hr {
+    margin-top: 5%; }
 
 section .intro_contact {
   margin: 10% 5%;
@@ -613,7 +595,7 @@ body, html {
   height: 100%;
   margin: 0; }
 
-h1, h2, h3, p {
+h1, h2, h3, p, a, span {
   color: black;
   font-family: 'Roboto', sans-serif; }
 
@@ -631,7 +613,8 @@ hr {
 
 h1 {
   font-weight: 900;
-  font-size: 4em; }
+  font-size: 4em;
+  margin-bottom: 0; }
   @media only screen and (max-width: 768px) {
     h1 {
       font-size: 3em; } }
@@ -641,7 +624,7 @@ h1 {
   padding-left: 100px; }
   .titles hr {
     margin-top: 2.5%;
-    margin-left: -100px;
+    margin-left: -90px;
     position: absolute; }
     @media only screen and (max-width: 768px) {
       .titles hr {
@@ -650,26 +633,14 @@ h1 {
   .titles h2 {
     font-size: 3.5em;
     font-weight: 800;
-    position: absolute;
     letter-spacing: 0.1em;
-    z-index: 2; }
+    z-index: 2;
+    text-shadow: 10px 10px 0px rgba(239, 239, 239, 0.85); }
     @media only screen and (max-width: 768px) {
       .titles h2 {
         font-size: 2.3em;
         text-align: start;
         letter-spacing: none; } }
-  .titles span {
-    color: #C9C9C9C9;
-    font-size: 3.5em;
-    font-weight: 800;
-    opacity: 0.4;
-    margin-left: 15px;
-    z-index: 1;
-    letter-spacing: 0.1em; }
-    @media only screen and (max-width: 768px) {
-      .titles span {
-        font-size: 2em;
-        text-align: start; } }
 
 h3 {
   font-weight: 600;
@@ -780,7 +751,7 @@ body, html {
   height: 100%;
   margin: 0; }
 
-h1, h2, h3, p {
+h1, h2, h3, p, a, span {
   color: black;
   font-family: 'Roboto', sans-serif; }
 
@@ -798,7 +769,8 @@ hr {
 
 h1 {
   font-weight: 900;
-  font-size: 4em; }
+  font-size: 4em;
+  margin-bottom: 0; }
   @media only screen and (max-width: 768px) {
     h1 {
       font-size: 3em; } }
@@ -808,7 +780,7 @@ h1 {
   padding-left: 100px; }
   .titles hr {
     margin-top: 2.5%;
-    margin-left: -100px;
+    margin-left: -90px;
     position: absolute; }
     @media only screen and (max-width: 768px) {
       .titles hr {
@@ -817,26 +789,14 @@ h1 {
   .titles h2 {
     font-size: 3.5em;
     font-weight: 800;
-    position: absolute;
     letter-spacing: 0.1em;
-    z-index: 2; }
+    z-index: 2;
+    text-shadow: 10px 10px 0px rgba(239, 239, 239, 0.85); }
     @media only screen and (max-width: 768px) {
       .titles h2 {
         font-size: 2.3em;
         text-align: start;
         letter-spacing: none; } }
-  .titles span {
-    color: #C9C9C9C9;
-    font-size: 3.5em;
-    font-weight: 800;
-    opacity: 0.4;
-    margin-left: 15px;
-    z-index: 1;
-    letter-spacing: 0.1em; }
-    @media only screen and (max-width: 768px) {
-      .titles span {
-        font-size: 2em;
-        text-align: start; } }
 
 h3 {
   font-weight: 600;
@@ -983,7 +943,7 @@ body, html {
   height: 100%;
   margin: 0; }
 
-h1, h2, h3, p {
+h1, h2, h3, p, a, span {
   color: black;
   font-family: 'Roboto', sans-serif; }
 
@@ -1001,7 +961,8 @@ hr {
 
 h1 {
   font-weight: 900;
-  font-size: 4em; }
+  font-size: 4em;
+  margin-bottom: 0; }
   @media only screen and (max-width: 768px) {
     h1 {
       font-size: 3em; } }
@@ -1011,7 +972,7 @@ h1 {
   padding-left: 100px; }
   .titles hr {
     margin-top: 2.5%;
-    margin-left: -100px;
+    margin-left: -90px;
     position: absolute; }
     @media only screen and (max-width: 768px) {
       .titles hr {
@@ -1020,26 +981,14 @@ h1 {
   .titles h2 {
     font-size: 3.5em;
     font-weight: 800;
-    position: absolute;
     letter-spacing: 0.1em;
-    z-index: 2; }
+    z-index: 2;
+    text-shadow: 10px 10px 0px rgba(239, 239, 239, 0.85); }
     @media only screen and (max-width: 768px) {
       .titles h2 {
         font-size: 2.3em;
         text-align: start;
         letter-spacing: none; } }
-  .titles span {
-    color: #C9C9C9C9;
-    font-size: 3.5em;
-    font-weight: 800;
-    opacity: 0.4;
-    margin-left: 15px;
-    z-index: 1;
-    letter-spacing: 0.1em; }
-    @media only screen and (max-width: 768px) {
-      .titles span {
-        font-size: 2em;
-        text-align: start; } }
 
 h3 {
   font-weight: 600;
@@ -1132,7 +1081,7 @@ ion-icon {
     width: 450px;
     height: 475px;
     border-radius: 25px;
-    box-shadow: 0px 3px 6px #C9C9C9C9;
+    box-shadow: 0px 3px 6px #efefef;
     padding: 1em;
     display: flex;
     flex-direction: column;

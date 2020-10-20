@@ -9,6 +9,7 @@ header {
     height: 750px;
     left: 0;
     top: 0;
+    
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -45,28 +46,37 @@ header {
         }
     }
     .link{
+        // border:2px solid yellow;
         display: flex;
         flex-direction: column;
         width: 80%;
-        justify-content: space-between;
+        justify-content: space-around;
         margin-left: 10%;
         margin-top: 35px;
         margin-bottom: 0;
         .item_logo{
+            // border:2px solid salmon;
             margin-bottom: 7%;
             display: flex;
+            // align-items: center;
+            vertical-align: middle;
+            
+            
             img{
                 margin-right: 20px;
                 height: 70%;
+                vertical-align: middle;
                 @media #{$medium-up}{margin-right: 0px;}  
 
             }
             span{
                 font-family: 'Roboto', sans-serif;
-                font-weight: 800;
+                font-weight: 700;
                 font-size: 1.25em;
                 text-decoration: none;
                 color: black;
+            // align-items: center;
+               
                 @media #{$medium-up}{display: none;}  
             }
         }
@@ -77,26 +87,30 @@ header {
 // --> Navbar navigation
 nav {
     // border: 1px solid red;
-    height: 70px;
+    height: 80px;
     position: relative;
     z-index: 1;
-    top: 0;
-    width: 25%;
-    right: -75%;
+    top: 15px;
+    width: 100%;
+    // right: -75%;
     // text-align: end;
     display: flex;
-    justify-content: end !important;
+    justify-content: flex-end !important;
     align-items: center;
+    vertical-align: middle;
     @media #{$medium-up}{
         width: auto;
         right: -1%;
     } 
-    
-    li {
-        display: inline;
-        list-style: none;
-        text-align: end !important;
-        margin: 20px;
+    ul{
+        margin-right: 5%;
+        li {
+            display: inline;
+            list-style: none;
+            text-align: end !important;
+            margin: 20px;
+            font-size: 1.3em;
+        }
     }
 }
 
@@ -113,6 +127,7 @@ a{
 
 // -> Footer
 footer{
+    
     border-top : 2px solid $border;;
     display:flex;
     justify-content: space-between;
