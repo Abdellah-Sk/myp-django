@@ -7,8 +7,13 @@ from .form import ContactForm
 
 
 def index(request):
-    projects = Project.objects.all()
-    return render(request, "projects/index.html", {'projects': projects})
+    project1 = Project.objects.filter(favoris=True)[0]
+    project2 = Project.objects.filter(favoris=True)[1]
+    project3 = Project.objects.filter(favoris=True)[2]
+
+    return render(request, "projects/index.html", {'project1': project1,
+                                                   'project2': project2,
+                                                   'project3': project3})
 
 
 def projects(request):
