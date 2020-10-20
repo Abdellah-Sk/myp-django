@@ -140,21 +140,39 @@
                     align-items: center;
                     }
                 .projet1{
-                    width: 440px;
-                    height: 285px;
+                    width: 550px;
+                    // height: 285px;
                     // border:2px solid darkblue;
+                    img{
+                        background-position: center;
+                        width: 550px;
+                        @media #{$medium-up}{ 
+                            width: 300px;
+                        }
+                    } 
                    
                 }
                 .projet2{
-                    width: 350px;
-                    height: 240px;
+                    width: 450px;
+                    height: auto;
                     // border:2px solid orangered;
                     margin-left: 29% !important;
+                    img{
+                        background-position: center;
+                        width: 450px;
+                        @media #{$medium-up}{ 
+                            width: 300px;
+                        }
+                    }
                 }
                 .projet3{
-                    width: 265px;
-                    height: 350px;
+                    width: 310px;
+                    // height: 350px;
                     // border:2px solid darkgreen;
+                    img{
+                        background-position: center;
+                        width: 310px;
+                    }
                 }
                 .all_project{
                     width: 200px;

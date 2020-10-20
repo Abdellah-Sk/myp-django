@@ -18,7 +18,7 @@
         margin-left: -5%;
     }
     .singleProjet{
-        border:2px solid green;
+        // border:2px solid green;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -40,7 +40,7 @@
             width: 90%;
             height: auto;
             @media #{$medium-up}{
-                border:2px solid red;
+                // border:2px solid red;
                 width: 80%;
                 margin-top: 10%;
             }
