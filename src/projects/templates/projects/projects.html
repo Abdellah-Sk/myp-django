@@ -21,7 +21,7 @@
         <div class="projet_contents">
             <p class="projet_name">{{project.title}}</p>
             <p class="projet_description">{{project.excerpt}}</p>
-            <a href="{% url 'details' project.id %}" class="projet_linkPage">En savoir plus</a>
+            <a href="{% url 'details' project.id %}" class="projet_linkPage">En savoir plus &#8594;</a>
           </div>
           {% for tech in project.technology.all %}
               {% if forloop.first %}
