@@ -19,6 +19,7 @@
         <span>voir les projets</span>
         <img  src="{% static 'projects/img/icon-arrow.png' %}"/>
     </div>
+<<<<<<< HEAD
     {# WORK #}
     <section ><br> 
         <div class="titles title_work" 
@@ -45,6 +46,34 @@
             {% endfor %}
         </div>
     </section>
+=======
+
+  <div class="container">
+  <div class="row">
+      <h2>Mes projets</h2>
+      <hr>
+
+      <div class="">
+          <h2>{{project1.title}}</h2>
+          <p>{{project1.excerpt}}</p>
+          <a href="{% url 'details' project1.id %}" class="btn btn-primary">En savoir plus</a>
+      </div>
+
+      <div class="">
+          <h2>{{project2.title}}</h2>
+          <p>{{project2.excerpt}}</p>
+          <a href="{% url 'details' project2.id %}" class="btn btn-primary">En savoir plus</a>
+      </div>
+
+      <div class="">
+          <h2>{{project3.title}}</h2>
+          <p>{{project3.excerpt}}</p>
+          <a href="{% url 'details' project3.id %}" class="btn btn-primary">En savoir plus</a>
+      </div>
+  </div>
+  </div>
+
+>>>>>>> fbee934dc1323690b041def70d08649653b3972d
 {# Invitation page Contact #}
 <section>
     <div class="titles title-contact"
