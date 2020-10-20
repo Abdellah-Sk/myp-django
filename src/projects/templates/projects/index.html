@@ -20,7 +20,7 @@
         <img  src="{% static 'projects/img/icon-arrow.png' %}"/>
     </div>
     {# WORK #}
-    <section ><br> 
+    <section><br>
         <div class="titles title_work" 
              data-aos="fade-right" 
              data-aos-duration="1000"
@@ -61,44 +61,17 @@
                     </a>
                     {# projet 3 #}
                     <div class="projet projet3 image">
-                        <a href="{% url 'details' project3.id %}" >
+                        <a href="{% url 'details' project3.id %}">
                         <div class="image__title">                       
                             <p class="projet_name">{{project3.title}}</p>
                             {# <p>{{project3.excerpt}}</p> #}
-                            </a>
+                        </div>
+                        </a>
                         </div>
                     </div>
-                </div>    
+                </div>
             </div>
     </section>
-<<<<<<< HEAD
-
-  <div class="container">
-  <div class="row">
-      <h2>Mes projets</h2>
-      <hr>
-
-      <div class="">
-          <h2>{{project1.title}}</h2>
-          <p>{{project1.excerpt}}</p>
-          <a href="{% url 'details' project1.id %}" class="btn btn-primary">En savoir plus</a>
-      </div>
-
-      <div class="">
-          <h2>{{project2.title}}</h2>
-          <p>{{project2.excerpt}}</p>
-          <a href="{% url 'details' project2.id %}" class="btn btn-primary">En savoir plus</a>
-      </div>
-
-      <div class="">
-          <h2>{{project3.title}}</h2>
-          <p>{{project3.excerpt}}</p>
-          <a href="{% url 'details' project3.id %}" class="btn btn-primary">En savoir plus</a>
-      </div>
-  </div>
-  </div>
-=======
->>>>>>> 1bb28e02b43d2a312c00d87c40f5e5b10d5667c2
 
 {# Invitation page Contact #}
 <section>
