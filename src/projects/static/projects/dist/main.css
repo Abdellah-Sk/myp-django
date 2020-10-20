@@ -711,14 +711,14 @@ section .all_projects {
     section .all_projects .box_project .projet_contents {
       background-color: #0f4c81;
       z-index: 2;
-      width: 35%;
+      width: 30%;
       padding: 2em;
       margin-top: 0;
       position: absolute;
       text-align: start;
       align-content: center;
       margin-left: 35%;
-      margin-top: 5%; }
+      margin-top: 7%; }
       @media only screen and (max-width: 768px) {
         section .all_projects .box_project .projet_contents {
           display: flex;
@@ -729,13 +729,26 @@ section .all_projects {
       section .all_projects .box_project .projet_contents .projet_name {
         color: #FFFFFF;
         font-size: 1.5em;
-        font-weight: 700; }
+        font-weight: 700;
+        margin-top: 0; }
       section .all_projects .box_project .projet_contents .projet_description {
         color: #FFFFFF;
         font-size: 0.8em; }
       section .all_projects .box_project .projet_contents .projet_linkPage {
         font-style: oblique;
         color: #FFFFFF; }
+    section .all_projects .box_project .projet_techno {
+      color: #A5A5A5;
+      text-decoration: none;
+      list-style-type: none;
+      font-size: 70px;
+      font-weight: 700;
+      opacity: 0.5;
+      z-index: 3;
+      left: 60%;
+      margin-top: 19%;
+      position: absolute;
+      font-family: 'Roboto', sans-serif; }
   section .all_projects .right img {
     margin-left: 45%; }
     @media only screen and (max-width: 768px) {

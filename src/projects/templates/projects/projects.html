@@ -3,28 +3,32 @@
 {% block content %}
 
 <section>
-    <div class="titles">
-        <hr class=""/>
-        <div class="title_h2">
-            <h2>Mes projets</h2>
-            <span>Mes projets</span>
-        </div>
-    </div>
+  <div class="titles"
+       data-aos="fade-right" 
+       data-aos-duration="1000"
+       data-aos-easing="ease-in-sine">
+    <hr class=""/>
+    <div class="title_h2">
+      <h2>Mes projets</h2>
+    </div>       
+  </div>
 
-    <div class="all_projects">
+  <div class="all_projects">
 
-    {% for project in x %}
-    <img class="" src="{{project.image.url}}" alt="">
-        <div class="project_contents">
+      {% for project in x %}
+      <div class="box_project">  
+        <img class="" src="{{project.image.url}}" alt="">
+        <div class="projet_contents">
             <p class="projet_name">{{project.title}}</p>
             <p class="projet_description">{{project.excerpt}}</p>
-            {% for tech in project.technology.all %}
-                {% if forloop.first %}
-                    <li>{{tech}}</li>
-                {% endif %}
-            {% endfor %} <br>
             <a href="{% url 'details' project.id %}" class="projet_linkPage">En savoir plus</a>
-        </div>
+          </div>
+          {% for tech in project.technology.all %}
+              {% if forloop.first %}
+                  <li class="projet_techno">{{tech}}</li>
+              {% endif %}
+          {% endfor %} <br>
+      </div>
     {% endfor %}
     </div>
 </section>
