@@ -1,0 +1,14 @@
+asgiref==3.2.10
+certifi==2020.6.20
+chardet==3.0.4
+Django==3.1.1
+django-environ==0.4.5
+django-sass==1.0.0
+idna==2.10
+libsass==0.20.1
+Pillow==7.2.0
+pytz==2020.1
+requests==2.24.0
+six==1.15.0
+sqlparse==0.3.1
+urllib3==1.25.10
