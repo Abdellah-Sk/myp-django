@@ -3,29 +3,21 @@
 
 // -> PAGE ACCUEIL
 .container {
-    // border:2px solid rebeccapurple;
     width: 75%;
     position: relative;
     z-index: 3;
-    margin-top: 1%;
-    margin-left: 17%;
+    margin: 1% 0 0 17%;
     @media #{$medium-up}{ 
         margin-left:none;
     }
     // Header
     .header{
-    // border:2px solid gold;
-
         display: flex;
         align-items: center;
         @media #{$medium-up}{ 
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            @include display-column;
         }
         .profil_picture {
-            
             height: 550px;
             width: auto;
             border-radius: 13px;
@@ -39,7 +31,6 @@
         span{
             border:2px solid transparent;
             margin-bottom: 15%;
-            // margin-left: 5%;
             .hr_title{
                 margin-top: 35%;
                 @media #{$medium-up}{ 
@@ -55,17 +46,17 @@
             justify-content: start;
             flex-direction: column;
             margin-left: 2%;
-            // border:2px solid red;
+            border:2px solid red;
             @media #{$medium-up}{ 
                 width: auto;
                 text-align: center;
+                align-items: center;
                 margin-top: 7%;
             }
             p{font-size: 0.75em; width: 80%;}
         } 
     }
     .view_project{
-        // border:2px solid green;
         position: absolute;
         margin-left: 100%;
         margin-top: -10%;
@@ -84,27 +75,25 @@
         .title_work{margin-top: 10%;}
         .projets_all{
             flex-direction: column;
-            // border:3px solid royalblue;
             width: 100%;
-            margin-bottom: 10%;
-            margin-top: 5%;
-
+            margin :5% 0 10% 0;
             .box{
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
-                // border:2px solid brown;
+                @media #{$medium-up}{ 
+                    flex-direction: column;
+                }
                 .box1,.box2{
-                    // border:2px solid yellow;
                     width: auto;
                     margin:5%;
                     .image{
                         position: relative;
-                        margin: 7%;
                         background-size: contain;
                         background-clip: content-box;
                         border-radius: 20px;
                         background-position: center;
+                        margin: 7%;
                         overflow: hidden;
                     }
                     .image__title{
@@ -132,17 +121,18 @@
                         opacity: 0.80;
                     }                      
                 }
-                .box1{ justify-content: flex-end;}
+                .box1{ 
+                    justify-content: flex-end;
+                }
                 .box2{ 
-                    display:flex; 
-                    flex-direction: column;
-                    justify-content: center; 
-                    align-items: center;
+                    @include display-column;
                     }
                 .projet1{
                     width: 550px;
-                    // height: 285px;
-                    // border:2px solid darkblue;
+                    @media #{$medium-up}{ 
+                        width: 300px;
+                    }
+
                     img{
                         background-position: center;
                         width: 550px;
@@ -150,13 +140,15 @@
                             width: 300px;
                         }
                     } 
-                   
                 }
                 .projet2{
                     width: 450px;
                     height: auto;
-                    // border:2px solid orangered;
                     margin-left: 29% !important;
+                    @media #{$medium-up}{ 
+                        margin-left: 30px !important;
+                        width: 300px;
+                    }
                     img{
                         background-position: center;
                         width: 450px;
@@ -167,8 +159,6 @@
                 }
                 .projet3{
                     width: 310px;
-                    // height: 350px;
-                    // border:2px solid darkgreen;
                     img{
                         background-position: center;
                         width: 310px;
@@ -179,14 +169,9 @@
                     height: 70px;
                     background-color: $color_primary;
                     padding: 1em;
-                    // margin: 5%;
-                    margin-top: 50px;
-                    margin-bottom: 20px;
-
+                    margin: 50px 0 50px 0;
                     border-radius: 12px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    @include display-center;
                     cursor: pointer;
                     p{
                         color: white;
@@ -197,20 +182,16 @@
 
             }
         }    
-        }         
-    }
+    }         
+}
     // Contact
      section{
         .title-contact{
             margin-left: 40%;
-            @media #{$medium-up}{ 
-                margin-left: 20%;
-                    
-                }
+            @media #{$medium-up}{ margin-left: 20%; }
                 hr{margin-top: 5%;}
         }
         .intro_contact{
-            // border:2px solid rebeccapurple;
             margin: 10% 5%;
             text-align: center;
             padding: 1em;
