@@ -3,6 +3,7 @@ $border: #F7F7F7;
 $background: #FFFFFF;
 $color_primary: rgb(15, 76, 129);
 $shadow_title: rgb(239,239,239);
+$techno_color: #A5A5A5;
 
 // Responsive
 $medium-up:"only screen and (max-width: 768px)";
@@ -11,6 +12,7 @@ $medium-up:"only screen and (max-width: 768px)";
 body, html {
     height: 100%;
     margin: 0;
+    font-family: 'Roboto', sans-serif;
     
 }
 h1,h2,h3,p,a,span{
