@@ -20,10 +20,7 @@
         width: 40%;
         @media #{$medium-up}{
            width: auto;
-           display: flex;
-           flex-direction: column;
-           align-items: center;
-           justify-content: center;
+           @include display-column;
         }
         // Texte
         p{
@@ -77,11 +74,8 @@
             border-radius: 25px;
             box-shadow: 0px 10px 16px $shadow_title;
             padding: 1em;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
             padding-right: 5%;
+            @include display-column;
             @media #{$medium-up}{
                 width: 100%;
                 height: auto;
