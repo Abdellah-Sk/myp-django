@@ -19,6 +19,9 @@ hr {
       margin-bottom: -10%;
       margin-left: -15%; } }
 
+a:hover {
+  color: #0f4c81; }
+
 h1 {
   font-weight: 900;
   font-size: 4em;
@@ -104,6 +107,9 @@ hr {
     .project {
       margin-bottom: -10%;
       margin-left: -15%; } }
+
+a:hover {
+  color: #0f4c81; }
 
 h1 {
   font-weight: 900;
@@ -364,6 +370,9 @@ hr {
       margin-bottom: -10%;
       margin-left: -15%; } }
 
+a:hover {
+  color: #0f4c81; }
+
 h1 {
   font-weight: 900;
   font-size: 4em;
@@ -433,8 +442,7 @@ ion-icon {
   width: 75%;
   position: relative;
   z-index: 3;
-  margin-top: 1%;
-  margin-left: 17%; }
+  margin: 1% 0 0 17%; }
   @media only screen and (max-width: 768px) {
     .container {
       margin-left: none; } }
@@ -472,11 +480,13 @@ ion-icon {
       display: flex;
       justify-content: start;
       flex-direction: column;
-      margin-left: 2%; }
+      margin-left: 2%;
+      border: 2px solid red; }
       @media only screen and (max-width: 768px) {
         .container .header div {
           width: auto;
           text-align: center;
+          align-items: center;
           margin-top: 7%; } }
       .container .header div p {
         font-size: 0.75em;
@@ -500,22 +510,24 @@ ion-icon {
   .container section .projets_all {
     flex-direction: column;
     width: 100%;
-    margin-bottom: 10%;
-    margin-top: 5%; }
+    margin: 5% 0 10% 0; }
     .container section .projets_all .box {
       display: flex;
       flex-direction: row;
       justify-content: center; }
+      @media only screen and (max-width: 768px) {
+        .container section .projets_all .box {
+          flex-direction: column; } }
       .container section .projets_all .box .box1, .container section .projets_all .box .box2 {
         width: auto;
         margin: 5%; }
         .container section .projets_all .box .box1 .image, .container section .projets_all .box .box2 .image {
           position: relative;
-          margin: 7%;
           background-size: contain;
           background-clip: content-box;
           border-radius: 20px;
           background-position: center;
+          margin: 7%;
           overflow: hidden; }
         .container section .projets_all .box .box1 .image__title, .container section .projets_all .box .box2 .image__title {
           position: absolute;
@@ -547,6 +559,9 @@ ion-icon {
         align-items: center; }
       .container section .projets_all .box .projet1 {
         width: 550px; }
+        @media only screen and (max-width: 768px) {
+          .container section .projets_all .box .projet1 {
+            width: 300px; } }
         .container section .projets_all .box .projet1 img {
           background-position: center;
           width: 550px; }
@@ -557,6 +572,10 @@ ion-icon {
         width: 450px;
         height: auto;
         margin-left: 29% !important; }
+        @media only screen and (max-width: 768px) {
+          .container section .projets_all .box .projet2 {
+            margin-left: 30px !important;
+            width: 300px; } }
         .container section .projets_all .box .projet2 img {
           background-position: center;
           width: 450px; }
@@ -573,8 +592,7 @@ ion-icon {
         height: 70px;
         background-color: #0f4c81;
         padding: 1em;
-        margin-top: 50px;
-        margin-bottom: 20px;
+        margin: 50px 0 50px 0;
         border-radius: 12px;
         display: flex;
         justify-content: center;
@@ -624,6 +642,9 @@ hr {
     .project {
       margin-bottom: -10%;
       margin-left: -15%; } }
+
+a:hover {
+  color: #0f4c81; }
 
 h1 {
   font-weight: 900;
@@ -818,6 +839,9 @@ hr {
       margin-bottom: -10%;
       margin-left: -15%; } }
 
+a:hover {
+  color: #0f4c81; }
+
 h1 {
   font-weight: 900;
   font-size: 4em;
@@ -886,12 +910,10 @@ ion-icon {
 .singleProjet_content {
   width: 100%;
   padding: 1em;
-  margin-top: 5%;
-  margin-left: 5%;
-  margin-bottom: 5%;
+  margin: 5% 0 5% 5%;
   display: flex;
-  align-content: center;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center; }
   @media only screen and (max-width: 768px) {
     .singleProjet_content {
       width: 120%;
@@ -900,8 +922,8 @@ ion-icon {
   .singleProjet_content .singleProjet {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center; }
+    justify-content: center;
+    align-items: center; }
     @media only screen and (max-width: 768px) {
       .singleProjet_content .singleProjet {
         width: 90%;
@@ -926,12 +948,10 @@ ion-icon {
         width: 43px;
         position: relative;
         top: 9%;
-        margin-bottom: -2%;
-        margin-left: -7%; }
+        margin: 0 0 -2% -7%; }
         @media only screen and (max-width: 768px) {
           .singleProjet_content .singleProjet .singleProjet_description hr {
-            margin-top: 2%;
-            top: 6%;
+            top: 20px;
             left: -5%;
             width: 23px; } }
       .singleProjet_content .singleProjet .singleProjet_description p {
@@ -985,12 +1005,11 @@ ion-icon {
         width: 43px;
         position: relative;
         top: 16%;
-        margin-bottom: -2%;
-        margin-left: -20%; }
+        margin: 0 0 -2% -20%; }
         @media only screen and (max-width: 768px) {
           .singleProjet_content .singleProjet_details .singleProjet_tech hr {
             margin-top: 2%;
-            top: 6%;
+            top: 25px;
             left: -5%;
             width: 23px; } }
       .singleProjet_content .singleProjet_details .singleProjet_tech li {
@@ -1026,6 +1045,9 @@ hr {
     .project {
       margin-bottom: -10%;
       margin-left: -15%; } }
+
+a:hover {
+  color: #0f4c81; }
 
 h1 {
   font-weight: 900;
@@ -1108,8 +1130,8 @@ ion-icon {
         width: auto;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center; } }
+        justify-content: center;
+        align-items: center; } }
     .content_contact .information p {
       font-size: 1.3em;
       text-align: start; }
@@ -1153,11 +1175,11 @@ ion-icon {
     border-radius: 25px;
     box-shadow: 0px 10px 16px #efefef;
     padding: 1em;
+    padding-right: 5%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    padding-right: 5%; }
+    justify-content: center;
+    align-items: center; }
     @media only screen and (max-width: 768px) {
       .content_contact .section-form .form {
         width: 100%;
