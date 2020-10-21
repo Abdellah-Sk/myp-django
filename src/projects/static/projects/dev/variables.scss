@@ -31,7 +31,7 @@ hr{
         margin-left: -15%;
     }
 }
-
+a:hover{ color: $color_primary;}
 h1{
     font-weight: 900;
     font-size: 4em;
@@ -107,3 +107,17 @@ ion-icon {
     --animate-duration: 3s;
     // --animate-delay: 5s;
 }  
+
+// DIPLAY FLEX
+@mixin display-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @mixin display-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
