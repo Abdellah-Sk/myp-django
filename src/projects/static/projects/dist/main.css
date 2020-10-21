@@ -27,7 +27,6 @@ h1 {
       font-size: 3em; } }
 
 .titles {
-  margin-top: 5%;
   padding-left: 100px; }
   .titles hr {
     margin-top: 2.5%;
@@ -113,7 +112,6 @@ h1 {
       font-size: 3em; } }
 
 .titles {
-  margin-top: 5%;
   padding-left: 100px; }
   .titles hr {
     margin-top: 2.5%;
@@ -372,7 +370,6 @@ h1 {
       font-size: 3em; } }
 
 .titles {
-  margin-top: 5%;
   padding-left: 100px; }
   .titles hr {
     margin-top: 2.5%;
@@ -633,7 +630,6 @@ h1 {
       font-size: 3em; } }
 
 .titles {
-  margin-top: 5%;
   padding-left: 100px; }
   .titles hr {
     margin-top: 2.5%;
@@ -840,7 +836,6 @@ h1 {
       font-size: 3em; } }
 
 .titles {
-  margin-top: 5%;
   padding-left: 100px; }
   .titles hr {
     margin-top: 2.5%;
@@ -1049,7 +1044,6 @@ h1 {
       font-size: 3em; } }
 
 .titles {
-  margin-top: 5%;
   padding-left: 100px; }
   .titles hr {
     margin-top: 2.5%;
@@ -1107,9 +1101,9 @@ ion-icon {
   --animate-duration: 3s; }
 
 .content_contact {
-  border: 2px solid rebeccapurple;
   display: flex;
   justify-content: space-around;
+  width: 80%;
   margin-bottom: 10%;
   margin-left: 10%; }
   @media only screen and (max-width: 768px) {
@@ -1120,7 +1114,11 @@ ion-icon {
     width: 40%; }
     @media only screen and (max-width: 768px) {
       .content_contact .information {
-        width: auto; } }
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; } }
     .content_contact .information p {
       font-size: 1.3em;
       text-align: start; }
@@ -1130,7 +1128,10 @@ ion-icon {
           margin-top: 10%; } }
     .content_contact .information div {
       margin-top: 20%;
-      height: 50%; }
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
       @media only screen and (max-width: 768px) {
         .content_contact .information div {
           margin-top: none;
@@ -1140,11 +1141,11 @@ ion-icon {
         color: #0f4c81;
         font-weight: 800;
         font-size: 20px;
-        margin-bottom: 15%; }
+        margin-bottom: 10%; }
         @media only screen and (max-width: 768px) {
           .content_contact .information div span {
             font-size: 15px;
-            align-content: flex-start; } }
+            text-align: center; } }
         .content_contact .information div span .icon_contact {
           color: black;
           border-radius: 5px;
@@ -1154,21 +1155,21 @@ ion-icon {
           vertical-align: middle; }
           @media only screen and (max-width: 768px) {
             .content_contact .information div span .icon_contact {
-              margin-left: 0; } }
+              margin: 0; } }
         @media only screen and (max-width: 768px) {
           .content_contact .information div span .phone {
-            margin-right: 20% !important; } }
+            margin-right: 2%; } }
   .content_contact .section-form .form {
-    width: 450px;
-    height: 475px;
+    width: 400px;
+    height: 400px;
     border-radius: 25px;
-    box-shadow: 0px 3px 6px #efefef;
+    box-shadow: 0px 10px 16px #efefef;
     padding: 1em;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: flex-end;
-    padding-right: 15%; }
+    align-items: center;
+    padding-right: 5%; }
     @media only screen and (max-width: 768px) {
       .content_contact .section-form .form {
         width: 100%;
@@ -1178,9 +1179,12 @@ ion-icon {
         justify-content: center;
         align-items: flex-center; } }
     .content_contact .section-form .form input, .content_contact .section-form .form textarea {
-      width: 300px;
+      width: 250px;
+      display: flex;
       align-items: flex-end;
-      margin-bottom: 15px; }
+      text-align: end;
+      margin-bottom: 15px;
+      vertical-align: text-top; }
       @media only screen and (max-width: 768px) {
         .content_contact .section-form .form input, .content_contact .section-form .form textarea {
           width: 100%; } }
