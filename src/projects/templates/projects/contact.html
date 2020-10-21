@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<section >
+<section>
     <div class="titles"
          data-aos="fade-right" 
          data-aos-duration="1000"
@@ -12,8 +12,8 @@
             <h2>Contact</h2>
         </div>       
     </div>
-
     <div class="content_contact">
+        {# Bloc texte et coordonnées #}
         <div class="information">
             <p>Pour une question où juste envie <br/> d'une discution</p>
             <div>
@@ -21,17 +21,16 @@
                 <span><ion-icon name="call-outline" class="icon_contact phone"></ion-icon>{{ user.profile.phone }}</span>
             </div>
         </div>
-
+        {# Bloc fomulaire #}
         <div class="section-form">
             <div class="form">
-        <form method="POST" class="post-form">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="save btn">Envoyer</button>
-        </form>
+                <form method="POST" class="post-form">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="save btn">Envoyer</button>
+                </form>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 </section>>
-
 {% endblock %}
