@@ -1,28 +1,22 @@
-// Page afichage projet unique
+// PAGE PROJET DETAILS
 @import "../variables.scss";
 
+// Ici, un seul projet selectionner est affichée.
+// La page contient plusieur elements: L'image, 
+//  la decsription, les liens et les technos utilisé.
 
 .singleProjet_content{
     width: 100%;
     padding: 1em;
-    margin-top: 5%;
-    margin-left: 5%;
-    margin-bottom: 5%;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    // border:2px solid rebeccapurple;
+    margin: 5% 0 5% 5%;
+    @include display-center;
     @media #{$medium-up}{
         width: 120%;
         padding: 0;
         margin-left: -5%;
     }
     .singleProjet{
-        border:2px solid green;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        @include display-column;
         @media #{$medium-up}{ 
             width: 90%;
             display: flex;
@@ -35,12 +29,12 @@
                 height: auto;
             }
         }
+        // Description du projet
         .singleProjet_description{
             margin-top: 5%;
             width: 90%;
             height: auto;
             @media #{$medium-up}{
-                border:2px solid red;
                 width: 80%;
                 margin-top: 10%;
             }
@@ -49,11 +43,9 @@
                 width: 43px;
                 position: relative;
                 top: 9% ;
-                margin-bottom: -2%;
-                margin-left: -7%;
+                margin: 0 0 -2% -7%;
                 @media #{$medium-up}{
-                    margin-top: 2%;
-                    top:6%;
+                    top: 20px;
                     left: -5%;
                     width: 23px;
                 }
@@ -77,27 +69,23 @@
         @media #{$medium-up}{
             flex-direction: column;
         }
+        // Liens
         .singleProjet_links{
             width: 370px;
             height: auto;
             padding: 1em;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            @include display-column;
             line-height: 50px;
             background-color: $color_primary;
             border-radius: 15px;
             vertical-align: middle;
-
             @media #{$medium-up}{
                 height: 70%;
                 width: auto;
                 padding:0.5em;
                 margin-bottom: 15%;
             }
-            span{
-                
+            span{ 
                 @media #{$medium-up}{
                    padding-left: 5%;
                 }
@@ -109,30 +97,20 @@
                     }
                 }
             }
-
         }
+        // Technologies
         .singleProjet_tech{
             width: 40%;
             padding: 1em;
-            // hr{
-            //     border:2px solid $color_primary;
-            //     width: 33px;
-            //     margin-bottom: -5%;
-            //     margin-left: -20%;
-            //     @media #{$medium-up}{
-            //        margin-top: 2%;
-            //     }
-            // }
             hr{
                 border:2px solid $color_primary;
                 width: 43px;
                 position: relative;
                 top: 16% ;
-                margin-bottom: -2%;
-                margin-left: -20%;
+                margin :0 0 -2% -20%;
                 @media #{$medium-up}{
                     margin-top: 2%;
-                    top:6%;
+                    top:25px;
                     left: -5%;
                     width: 23px;
                 }
@@ -147,6 +125,7 @@
             }
         }
     }
+    // Lien page retour 
     .back{
         margin: 5%;
         text-align: center;

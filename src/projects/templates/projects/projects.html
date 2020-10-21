@@ -14,45 +14,45 @@
   </div>
 
   <div class="all_projects">
-
-      {% for project in x %}
-      <div class="box_project">  
-        <img class="" src="{{project.image.url}}" alt="">
-        <div class="projet_contents">
-            <p class="projet_name">{{project.title}}</p>
-            <p class="projet_description">{{project.excerpt}}</p>
-            <a href="{% url 'details' project.id %}" class="projet_linkPage">En savoir plus &#8594;</a>
-          </div>
-          {% for tech in project.technology.all %}
-              {% if forloop.first %}
-                  <li class="projet_techno">{{tech}}</li>
-              {% endif %}
-          {% endfor %} <br>
+    {% for project in x %}
+    <div class="box_project">  
+      <img class="" src="{{project.image.url}}" alt="">
+      <div class="projet_contents">
+        <p class="projet_name">{{project.title}}</p>
+        <p class="projet_description">{{project.excerpt}}</p>
+        <a href="{% url 'details' project.id %}" class="projet_linkPage">En savoir plus &#8594;</a>
       </div>
+      {% for tech in project.technology.all %}
+        {% if forloop.first %}
+          <li class="projet_techno">{{tech}}</li>
+        {% endif %}
+      {% endfor %} <br>
+    </div>
     {% endfor %}
+  </div>
+
+  <div class="container_pagination" >
+    {% if x.has_other_pages %}
+    <ul class="pagination">
+      {% if x.has_previous %}
+      <li><a class="arrow"href="?page={{ x.previous_page_number }}">&laquo;</a></li>
+        {% else %}
+        <li class="disabled" ><span>&laquo;</span></li>
+        {% endif %}
+        {% for i in x.paginator.page_range %}
+          {% if x.number == i %}
+            <li class="active" style="font-weight:800; color:rgb(15, 76, 129);"><span>{{ i }} <span class="sr-only"></span></span></li>
+          {% else %}
+            <li><a href="?page={{ i }}">{{ i }}</a></li>
+          {% endif %}
+        {% endfor %}
+        {% if x.has_next %}
+          <li><a  class="arrow" href="?page={{ x.next_page_number }}">&raquo;</a></li>
+        {% else %}
+          <li class="disabled"><span>&raquo;</span></li>
+        {% endif %}
+      </ul>
+    {% endif %}
     </div>
 </section>
-
-{% if x.has_other_pages %}
-  <ul class="pagination">
-    {% if x.has_previous %}
-      <li><a href="?page={{ x.previous_page_number }}">&laquo;</a></li>
-    {% else %}
-      <li class="disabled"><span>&laquo;</span></li>
-    {% endif %}
-    {% for i in x.paginator.page_range %}
-      {% if x.number == i %}
-        <li class="active"><span>{{ i }} <span class="sr-only">(current)</span></span></li>
-      {% else %}
-        <li><a href="?page={{ i }}">{{ i }}</a></li>
-      {% endif %}
-    {% endfor %}
-    {% if x.has_next %}
-      <li><a href="?page={{ x.next_page_number }}">&raquo;</a></li>
-    {% else %}
-      <li class="disabled"><span>&raquo;</span></li>
-    {% endif %}
-  </ul>
-{% endif %}
-
 {% endblock %}

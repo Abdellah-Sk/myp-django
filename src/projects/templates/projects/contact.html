@@ -2,25 +2,35 @@
 
 {% block content %}
 
-<section class="content_contact">
-    <div class="information">
-        <p>Pour une question où juste envie <br/> d'une discution</p>
+<section>
+    <div class="titles"
+         data-aos="fade-right" 
+         data-aos-duration="1000"
+         data-aos-easing="ease-in-sine">
+        <hr class=""/>
+        <div class="title_h2">
+            <h2>Contact</h2>
+        </div>       
+    </div>
+    <div class="content_contact">
+        {# Bloc texte et coordonnées #}
+        <div class="information">
+            <p>Pour une question où juste envie <br/> d'une discution</p>
             <div>
                 <span><ion-icon name="mail-outline" class="icon_contact"></ion-icon>{{ user.email }}</span>
                 <span><ion-icon name="call-outline" class="icon_contact phone"></ion-icon>{{ user.profile.phone }}</span>
             </div>
+        </div>
+        {# Bloc fomulaire #}
+        <div class="section-form">
+            <div class="form">
+                <form method="POST" class="post-form">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="save btn">Envoyer</button>
+                </form>
+            </div>
+        </div>
     </div>
-
-  <div class="container">
-    <div class="row">
-        <form method="POST" class="post-form">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button type="submit" class="save btn">Envoyer</button>
-        </form>
-    </div>
-  </div>
-
 </section>>
-
 {% endblock %}

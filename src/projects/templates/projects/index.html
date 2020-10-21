@@ -37,6 +37,8 @@
                     {# projet 1 #}
                     <div class="projet projet1 image">
                         <a href="{% url 'details' project1.id %}" >
+                            <img  src="{{project1.image.url}}" alt="">
+
                             <div class="image__title">
                                 <p class="projet_name">{{project1.title}}</p>
                                 {# <p>{{project1.excerpt}}</p> #}
@@ -46,6 +48,8 @@
                     {# projet 2 #}               
                     <div class="projet projet2 image">
                         <a href="{% url 'details' project2.id %}" >
+                        <img  src="{{project2.image.url}}" alt="">
+
                         <div class="image__title">  
                             <p class="projet_name">{{project2.title}}</p>
                             {# <p>{{project2.excerpt}}</p> #}
@@ -61,8 +65,10 @@
                     </a>
                     {# projet 3 #}
                     <div class="projet projet3 image">
-                        <a href="{% url 'details' project3.id %}">
-                        <div class="image__title">                       
+                        <a href="{% url 'details' project3.id %}" >
+                        <img  src="{{project3.image.url}}" alt="">
+
+                        <div class="image__title">
                             <p class="projet_name">{{project3.title}}</p>
                             {# <p>{{project3.excerpt}}</p> #}
                         </div>

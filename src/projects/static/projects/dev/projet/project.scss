@@ -1,6 +1,11 @@
-// @import "navbar.scss";
+// ---> PAGE PROJET
 @import "../variables.scss";
 
+//  Ici ce trouve tous les elements de la page Projets 
+//  qui liste sous formes de "card" la liste de tous 
+//  ton travails. Grace a la boucle {%for%}, les projets
+//  son separer en deux et permet de de disposée les cards
+//  sur de deux cotée diferents.  
 
 section{
     .all_projects{
@@ -19,10 +24,13 @@ section{
             vertical-align: middle;
             display: flex;
             @media #{$medium-up}{
+                width: 90%;
                 height: auto;
                 display: flex;
                 flex-direction: column;
                 padding: auto;
+                justify-content: center;
+                align-items: center;
             }
             img{
                 z-index: 1;
@@ -40,18 +48,16 @@ section{
                 z-index:2;
                 width: 30%;
                 padding: 2em;
-                margin-top: 0;
                 position: absolute;
                 text-align: start;
                 align-content: center;
-                margin-left: 35%;
-                margin-top: 7%;
+                margin: 7% 0 0 35%;
                 @media #{$medium-up}{
                     display: flex;
                     flex-direction: column;
                     margin-left: 0;
                     position: relative;
-                    width: 88.01%;
+                    width: 60%;
                 }
                 .projet_name{
                     color: $background;
@@ -69,7 +75,7 @@ section{
                 }
             }
             .projet_techno{
-                color: #A5A5A5;
+                color: $techno_color;
                 text-decoration: none;
                 list-style-type: none; 
                 font-size: 70px;
@@ -79,7 +85,11 @@ section{
                 left: 60%;
                 margin-top: 19%;
                 position: absolute;
-                font-family: 'Roboto', sans-serif;
+                @media #{$medium-up}{
+                    font-size: 50px;
+                    margin-bottom: 35%;
+                    text-align: center;
+                }
             }
         }
         .right{
@@ -95,6 +105,27 @@ section{
                     margin-left: 0;
                 }
             }
+        }
+    }
+    // Bloc Pagination
+    .container_pagination {
+        width: 100%;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .pagination li {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            list-style: none;
+        }
+        .pagination a:hover:not(.active) {font-weight: 900;}
+        .active {
+            background-color:$color_primary; 
+            color: white !important;
+            border-radius: 5px;
         }
     }
 }    
