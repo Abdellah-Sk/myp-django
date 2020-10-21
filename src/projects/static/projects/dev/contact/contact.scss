@@ -1,21 +1,22 @@
+// ---> PAGE CONTACT 
 @import "../variables.scss";
 
-// -> PAGE CONTACT 
+// Ici, tu trouvera tout les elements de la page CONTACT. 
+// La div Content_Contact regroupe les deux parties : Info & formulaire. 
+
+
+// Bloc Principale
 .content_contact{
-    // border:2px solid rebeccapurple;
     display: flex;
-    justify-content: space-around;
-    // height: 90%;
+    justify-content: space-around; 
     width: 80%;
-    margin-bottom: 10%;
-    margin-left: 10%;
+    margin: 0 0 10% 10%;
     @media #{$medium-up}{
         flex-direction: column;
         width: auto;
-        // margin-left: -25%;
     }
+    // Texte + coordonnées
     .information{
-        // border:2px solid royalblue;
         width: 40%;
         @media #{$medium-up}{
            width: auto;
@@ -23,8 +24,8 @@
            flex-direction: column;
            align-items: center;
            justify-content: center;
-
         }
+        // Texte
         p{
             font-size: 1.3em;
             text-align: start;
@@ -33,8 +34,8 @@
                 margin-top: 10%;
             }
         }
+        // Coordonnée
         div{
-            // border:2px solid red;
             margin-top: 20%;
             height: 50%;
             display: flex;
@@ -45,45 +46,31 @@
                 width: 100%;
             }
             span{
-                // border:2px solid greenyellow;
                 align-items: center;
                 color: $color_primary;
                 font-weight: 800;
                 font-size: 20px;
                 margin-bottom: 10%;
-                // height: 60%;
                 @media #{$medium-up}{
                     font-size: 15px;
-                    // margin-bottom: 5%;
                     text-align: center;
-                    
-                }
-                
+                }                
                 .icon_contact{
                     color:black;
-                    //background-color: black;
                     border-radius: 5px;
                     font-size: 35px;
                     padding: 0.1em;
-                    // top:15%;
                     position: relative;
                     vertical-align: middle;
-                    // border:2px solid black;
                     @media #{$medium-up}{
                         margin: 0;
-                    }
-                    
-                }
-                .phone{
-                    @media #{$medium-up}{
-                        margin-right: 2% ;
                     }
                 }
             }
         }
     }
     .section-form{
-        //  border:2px solid red;
+        // Box du formulaire
         .form{
             width: 400px;
             height: 400px;
@@ -103,7 +90,6 @@
                 justify-content: center;
                 align-items: flex-center;
             }
-            
             input, textarea{
                 width: 250px;
                 display: flex;
@@ -112,10 +98,8 @@
                 margin-bottom: 15px;
                 vertical-align: text-top;
                 @media #{$medium-up}{
-                    width: 100%;
-                    
+                    width: 80%;
                 }
-                
             }
         }
     }

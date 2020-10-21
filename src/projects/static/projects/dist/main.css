@@ -1104,8 +1104,7 @@ ion-icon {
   display: flex;
   justify-content: space-around;
   width: 80%;
-  margin-bottom: 10%;
-  margin-left: 10%; }
+  margin: 0 0 10% 10%; }
   @media only screen and (max-width: 768px) {
     .content_contact {
       flex-direction: column;
@@ -1156,9 +1155,6 @@ ion-icon {
           @media only screen and (max-width: 768px) {
             .content_contact .information div span .icon_contact {
               margin: 0; } }
-        @media only screen and (max-width: 768px) {
-          .content_contact .information div span .phone {
-            margin-right: 2%; } }
   .content_contact .section-form .form {
     width: 400px;
     height: 400px;
@@ -1187,5 +1183,5 @@ ion-icon {
       vertical-align: text-top; }
       @media only screen and (max-width: 768px) {
         .content_contact .section-form .form input, .content_contact .section-form .form textarea {
-          width: 100%; } }
+          width: 80%; } }
 
