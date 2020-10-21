@@ -1,6 +1,7 @@
 body, html {
   height: 100%;
-  margin: 0; }
+  margin: 0;
+  font-family: 'Roboto', sans-serif; }
 
 h1, h2, h3, p, a, span {
   color: black;
@@ -85,7 +86,8 @@ ion-icon {
 
 body, html {
   height: 100%;
-  margin: 0; }
+  margin: 0;
+  font-family: 'Roboto', sans-serif; }
 
 h1, h2, h3, p, a, span {
   color: black;
@@ -343,7 +345,8 @@ footer {
 
 body, html {
   height: 100%;
-  margin: 0; }
+  margin: 0;
+  font-family: 'Roboto', sans-serif; }
 
 h1, h2, h3, p, a, span {
   color: black;
@@ -603,7 +606,8 @@ section .intro_contact {
 
 body, html {
   height: 100%;
-  margin: 0; }
+  margin: 0;
+  font-family: 'Roboto', sans-serif; }
 
 h1, h2, h3, p, a, span {
   color: black;
@@ -703,13 +707,13 @@ section .all_projects {
     display: flex; }
     @media only screen and (max-width: 768px) {
       section .all_projects .box_project {
+        width: 90%;
         height: auto;
         display: flex;
         flex-direction: column;
         padding: auto;
         justify-content: center;
-        align-items: center;
-        width: 90%; } }
+        align-items: center; } }
     section .all_projects .box_project img {
       z-index: 1;
       position: relative;
@@ -725,12 +729,10 @@ section .all_projects {
       z-index: 2;
       width: 30%;
       padding: 2em;
-      margin-top: 0;
       position: absolute;
       text-align: start;
       align-content: center;
-      margin-left: 35%;
-      margin-top: 7%; }
+      margin: 7% 0 0 35%; }
       @media only screen and (max-width: 768px) {
         section .all_projects .box_project .projet_contents {
           display: flex;
@@ -759,8 +761,7 @@ section .all_projects {
       z-index: 3;
       left: 60%;
       margin-top: 19%;
-      position: absolute;
-      font-family: 'Roboto', sans-serif; }
+      position: absolute; }
       @media only screen and (max-width: 768px) {
         section .all_projects .box_project .projet_techno {
           font-size: 50px;
@@ -777,39 +778,29 @@ section .all_projects {
       section .all_projects .right .projet_contents {
         margin-left: 0; } }
 
-.paginations {
+section .container_pagination {
   width: 100%;
-  text-align: center;
-  border-radius: 15px;
-  padding: 0.5em 1em; }
-
-.pagination {
-  display: inline-block;
-  text-align: center;
-  margin-left: 50%; }
-  @media only screen and (max-width: 768px) {
-    .pagination {
-      display: flex;
-      justify-content: center;
-      margin: 0; } }
-
-.pagination li {
-  color: black;
-  float: left;
-  padding: 8px 16px;
-  text-decoration: none;
-  list-style: none; }
-
-.pagination a.active {
-  background-color: #4CAF50;
-  color: white; }
-
-.pagination a:hover:not(.active) {
-  background-color: #ddd; }
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  section .container_pagination .pagination li {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    list-style: none; }
+  section .container_pagination .pagination a:hover:not(.active) {
+    font-weight: 900; }
+  section .container_pagination .active {
+    background-color: #0f4c81;
+    color: white !important;
+    border-radius: 5px; }
 
 body, html {
   height: 100%;
-  margin: 0; }
+  margin: 0;
+  font-family: 'Roboto', sans-serif; }
 
 h1, h2, h3, p, a, span {
   color: black;
@@ -1017,7 +1008,8 @@ ion-icon {
 
 body, html {
   height: 100%;
-  margin: 0; }
+  margin: 0;
+  font-family: 'Roboto', sans-serif; }
 
 h1, h2, h3, p, a, span {
   color: black;
