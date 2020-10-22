@@ -2,14 +2,12 @@
 
 // --> Navbar de gauche 
 header {
-    background:$background;
-    border-right:2px solid $border;
+    border-right:2px solid $border_color;
     width: 20%;
     position: fixed;
     height: 750px;
     left: 0;
     top: 0;
-    
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -19,26 +17,20 @@ header {
         height: 100%;
     }
     .logo{
-        display: flex;
         width: 80%;
+        display: flex;
         justify-content: space-around;
-        margin-top: 5%;
-        margin-left: 5%;
         align-items: center;
-        // border: 2px solid red;
+        margin: 5% 0 0 5%;
         .circle{
             height: 45px;
             width: 45px;
-            border:2px solid black;
             border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            text-align: center;
-            align-items: center;
             font-size: 2em;
+            border:2px solid $second_color;
+            @include display-center;
         }
         span p{
-            font-family: 'Roboto', sans-serif;
             font-weight: 900;
             font-size: 1.25em;
             margin-top: 15px;
@@ -46,22 +38,15 @@ header {
         }
     }
     .link{
-        // border:2px solid yellow;
         display: flex;
         flex-direction: column;
-        width: 80%;
         justify-content: space-around;
-        margin-left: 10%;
-        margin-top: 35px;
-        margin-bottom: 0;
+        width: 80%;
+        margin: 35px 0 0 10%;
         .item_logo{
-            // border:2px solid salmon;
             margin-bottom: 7%;
             display: flex;
-            // align-items: center;
             vertical-align: middle;
-            
-            
             img{
                 margin-right: 20px;
                 height: 70%;
@@ -70,33 +55,23 @@ header {
 
             }
             span{
-                font-family: 'Roboto', sans-serif;
                 font-weight: 700;
                 font-size: 1.25em;
-                text-decoration: none;
-                color: black;
-            // align-items: center;
-               
+                text-decoration: none;               
                 @media #{$medium-up}{display: none;}  
             }
         }
         
-    }
-    
+    }  
 }
 // --> Navbar navigation
 nav {
-    // border: 1px solid red;
     height: 80px;
     position: relative;
     z-index: 1;
     top: 15px;
     width: 100%;
-    // right: -75%;
-    // text-align: end;
-    display: flex;
-    justify-content: flex-end !important;
-    align-items: center;
+    @include display-end;
     vertical-align: middle;
     @media #{$medium-up}{
         width: auto;
@@ -115,11 +90,11 @@ nav {
 }
 
 a{
-    color: black;
+    // color: black;
     text-decoration: none;
     &:hover{
-        color:black;
-        font-weight: 800;
+        // color:black;
+        font-weight: 700;
         text-decoration: none;
         
     }
@@ -128,7 +103,7 @@ a{
 // -> Footer
 footer{
     
-    border-top : 2px solid $border;;
+    border-top : 2px solid $border_color;;
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -136,7 +111,7 @@ footer{
     position: relative;
     margin-bottom:0;
     height: 20%;
-    background-color: $background; 
+    background-color: $white_color; 
     .logo{
         display: flex;
         width: 110%;
@@ -147,27 +122,20 @@ footer{
         .circle{
             height: 45px;
             width: 45px;
-            border:2px solid black;
+            border:2px solid $second_color;
             border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            text-align: center;
-            align-items: center;
+            @include display-center;
             font-size: 2em;
         }
         span {
-            font-family: 'Roboto', sans-serif;
             font-weight: 800;
             font-size: 1.25em;
             text-decoration: none;
-            color: black;
             @media #{$medium-up}{display: none;} 
         }
     }
     .link{
-        display: flex;
-        justify-content:space-around;
-        align-items: center;
+        @include display-center;
         .item_logo{
             display: flex;
             img{
@@ -180,18 +148,15 @@ footer{
         height: 70px;
         z-index: 1;
         top: 0;
-        width: 100%;
         left: 0;
-        display: flex;
-        justify-content: end;
-        align-items: center;
-        @media #{$medium-up}{
-            width: auto;
-        } 
+        margin-right: 5%;
+        @include display-end;
+        @media #{$medium-up}{width: auto;} 
         li {
             display: inline;
             list-style: none;
             margin: 20px;
+            font-weight: 600;
             @media #{$medium-up}{
                 font-size: small;
                 margin: 10%;
@@ -200,10 +165,13 @@ footer{
     }
     .make_myp{
         text-align: end;
+        margin-right: 10%;
+
         p{
             font-weight: 700;
-            color: $color_primary;
+            color: $first_color;
             font-size: 13px;
+            font-style: italic;
         }
     }
 }

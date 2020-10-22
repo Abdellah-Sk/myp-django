@@ -1,9 +1,12 @@
+
 // Color 
-$border: #F7F7F7;
-$background: #FFFFFF;
-$color_primary: rgb(15, 76, 129);
-$shadow_title: rgb(239,239,239);
-$techno_color: #A5A5A5;
+$first_color:rgb(15, 76, 129);
+$second_color: rgb(40,39,33);
+$third_color: rgb(165,165,165);
+
+$shadow_title: rgba(239,239,239, 0.85);
+$border_color: #F7F7F7;
+$white_color: rgb(255,255,255);
 
 // Responsive
 $medium-up:"only screen and (max-width: 768px)";
@@ -13,17 +16,22 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    
+    color:$second_color;    
 }
-h1,h2,h3,p,a,span{
-    color: black;
-    font-family: 'Roboto', sans-serif;
-}
+span, a{ color: $second_color;}
+// Div principal qui contient tout les elemnt des diferente page 
+.container {
+    width: 75%;
+    position: relative;
+    z-index: 3;
+    margin: 1% 0 0 17%;
+    @media #{$medium-up}{ 
+        margin-left:none;
+    }
+}    
 hr{
-    border:4px solid $color_primary;
+    border:4px solid $first_color;
     width: 53px;
-}
-.project{
     margin-bottom: -4%;
     margin-left: 2.5%;
     @media #{$medium-up}{
@@ -32,6 +40,7 @@ hr{
     }
 }
 
+a:hover{ color: $first_color;}
 h1{
     font-weight: 900;
     font-size: 4em;
@@ -40,9 +49,7 @@ h1{
 }
 
 .titles{
-    // margin-top: 3%;
     padding-left: 100px;
-    // border:2px solid red;
     hr{
         margin-top: 2.5% ;
         margin-left: -90px;
@@ -57,7 +64,7 @@ h1{
         font-weight: 800;
         letter-spacing: 0.1em;
         z-index: 2;
-        text-shadow: 10px 10px 0px rgba(239,239,239, 0.85);
+        text-shadow: 10px 10px 0px $shadow_title;
         @media #{$medium-up}{
             font-size: 2.3em;
             text-align: start;
@@ -79,31 +86,46 @@ h3{
 }
 
 button{
-    border:2px solid lightgray;
-    background-color: $background;
+    border:4px solid $third_color;
+    background-color: $third_color;
+    color: $border_color;
     border-radius: 50px;
     padding:0 1.5em 0 1.5em;
     width: 110px !important;
     height: 35px;
     margin-top: 5%;
     &:hover{
-        background-color: $color_primary;
-        color: white;
-        border:none;
+        background-color: $first_color;
+        color: $white_color;
+        border:none;    
     }
     @media #{$medium-up}{margin: 10%;}
-
 }
-
 
 ion-icon {
     font-size: 25px;
-    color: white;
     margin-right: 15px;
-    // margin-top: 15px;
-  }
+}
 
+// Animation header 
 .animate__animated{
     --animate-duration: 3s;
-    // --animate-delay: 5s;
 }  
+
+// DIPLAY FLEX
+@mixin display-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@mixin display-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin display-end {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
