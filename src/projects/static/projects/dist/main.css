@@ -1185,7 +1185,7 @@ ion-icon {
             font-size: 15px;
             text-align: center; } }
         .content_contact .information div span .icon_contact {
-          color: black;
+          color: #282721;
           border-radius: 5px;
           font-size: 35px;
           padding: 0.1em;
@@ -1211,13 +1211,13 @@ ion-icon {
         height: auto;
         padding-right: none;
         padding: none;
+        display: flex;
         justify-content: center;
-        align-items: flex-center; } }
+        align-items: center; } }
     .content_contact .section-form .form input, .content_contact .section-form .form textarea {
       width: 250px;
       display: flex;
       align-items: flex-end;
-      text-align: end;
       margin-bottom: 15px;
       vertical-align: text-top; }
       @media only screen and (max-width: 768px) {

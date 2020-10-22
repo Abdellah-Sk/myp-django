@@ -44,7 +44,7 @@
             }
             span{
                 align-items: center;
-                color: $color_primary;
+                color: $first_color;
                 font-weight: 800;
                 font-size: 20px;
                 margin-bottom: 10%;
@@ -53,7 +53,7 @@
                     text-align: center;
                 }                
                 .icon_contact{
-                    color:black;
+                    color:$second_color;
                     border-radius: 5px;
                     font-size: 35px;
                     padding: 0.1em;
@@ -81,14 +81,12 @@
                 height: auto;
                 padding-right: none;
                 padding: none;
-                justify-content: center;
-                align-items: flex-center;
+                @include display-center;
             }
             input, textarea{
                 width: 250px;
                 display: flex;
                 align-items: flex-end;
-                text-align: end;
                 margin-bottom: 15px;
                 vertical-align: text-top;
                 @media #{$medium-up}{
