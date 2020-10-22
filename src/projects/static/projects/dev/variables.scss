@@ -2,8 +2,12 @@
 // Color 
 $first_color:rgb(15, 76, 129);
 $second_color: rgb(40,39,33);
-// $border: #F7F7F7;
-// $background: #FFFFFF;
+$third_color: rgb(165,165,165);
+
+$border_color: #F7F7F7;
+$border: #F7F7F7;
+
+$background: #FFFFFF;
 $color_primary: rgb(15, 76, 129);
 $shadow_title: rgba(239,239,239, 0.85);
 $techno_color: #A5A5A5;
@@ -20,7 +24,7 @@ body, html {
     font-family: 'Roboto', sans-serif;
     color:$second_color;    
 }
-
+span, a{ color: $second_color;}
 // Div principal qui contient tout les elemnt des diferente page 
 .container {
     width: 75%;
@@ -88,9 +92,9 @@ h3{
 }
 
 button{
-    border:4px solid $button_color;
-    background-color: $button_color;
-    color: $border;
+    border:4px solid $third_color;
+    background-color: $third_color;
+    color: $border_color;
     border-radius: 50px;
     padding:0 1.5em 0 1.5em;
     width: 110px !important;
@@ -106,7 +110,6 @@ button{
 
 ion-icon {
     font-size: 25px;
-    color: $white_color;
     margin-right: 15px;
 }
 
@@ -125,5 +128,10 @@ ion-icon {
 @mixin display-center {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+@mixin display-end {
+    display: flex;
+    justify-content: flex-end;
     align-items: center;
 }

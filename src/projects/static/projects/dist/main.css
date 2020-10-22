@@ -4,98 +4,7 @@ body, html {
   font-family: 'Roboto', sans-serif;
   color: #282721; }
 
-.container {
-  width: 75%;
-  position: relative;
-  z-index: 3;
-  margin: 1% 0 0 17%; }
-  @media only screen and (max-width: 768px) {
-    .container {
-      margin-left: none; } }
-
-hr {
-  border: 4px solid #0f4c81;
-  width: 53px;
-  margin-bottom: -4%;
-  margin-left: 2.5%; }
-  @media only screen and (max-width: 768px) {
-    hr {
-      margin-bottom: -10%;
-      margin-left: -15%; } }
-
-a:hover {
-  color: #0f4c81; }
-
-h1 {
-  font-weight: 900;
-  font-size: 4em;
-  margin-bottom: 0; }
-  @media only screen and (max-width: 768px) {
-    h1 {
-      font-size: 3em; } }
-
-.titles {
-  padding-left: 100px; }
-  .titles hr {
-    margin-top: 2.5%;
-    margin-left: -90px;
-    position: absolute; }
-    @media only screen and (max-width: 768px) {
-      .titles hr {
-        margin-right: 105px;
-        width: 43px; } }
-  .titles h2 {
-    font-size: 3.5em;
-    font-weight: 800;
-    letter-spacing: 0.1em;
-    z-index: 2;
-    text-shadow: 10px 10px 0px rgba(239, 239, 239, 0.85); }
-    @media only screen and (max-width: 768px) {
-      .titles h2 {
-        font-size: 2.3em;
-        text-align: start;
-        letter-spacing: none; } }
-
-h3 {
-  font-weight: 600;
-  font-size: 1.35em;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  margin-bottom: 5%; }
-  @media only screen and (max-width: 768px) {
-    h3 {
-      font-size: 1em;
-      margin-bottom: 10%; } }
-
-button {
-  border: 4px solid #A5A5A5;
-  background-color: #A5A5A5;
-  color: #F7F7F7;
-  border-radius: 50px;
-  padding: 0 1.5em 0 1.5em;
-  width: 110px !important;
-  height: 35px;
-  margin-top: 5%; }
-  button:hover {
-    background-color: #0f4c81;
-    color: white;
-    border: none; }
-  @media only screen and (max-width: 768px) {
-    button {
-      margin: 10%; } }
-
-ion-icon {
-  font-size: 25px;
-  color: white;
-  margin-right: 15px; }
-
-.animate__animated {
-  --animate-duration: 3s; }
-
-body, html {
-  height: 100%;
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
+span, a {
   color: #282721; }
 
 .container {
@@ -162,8 +71,8 @@ h3 {
       margin-bottom: 10%; } }
 
 button {
-  border: 4px solid #A5A5A5;
-  background-color: #A5A5A5;
+  border: 4px solid #a5a5a5;
+  background-color: #a5a5a5;
   color: #F7F7F7;
   border-radius: 50px;
   padding: 0 1.5em 0 1.5em;
@@ -180,14 +89,108 @@ button {
 
 ion-icon {
   font-size: 25px;
-  color: white;
+  margin-right: 15px; }
+
+.animate__animated {
+  --animate-duration: 3s; }
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #282721; }
+
+span, a {
+  color: #282721; }
+
+.container {
+  width: 75%;
+  position: relative;
+  z-index: 3;
+  margin: 1% 0 0 17%; }
+  @media only screen and (max-width: 768px) {
+    .container {
+      margin-left: none; } }
+
+hr {
+  border: 4px solid #0f4c81;
+  width: 53px;
+  margin-bottom: -4%;
+  margin-left: 2.5%; }
+  @media only screen and (max-width: 768px) {
+    hr {
+      margin-bottom: -10%;
+      margin-left: -15%; } }
+
+a:hover {
+  color: #0f4c81; }
+
+h1 {
+  font-weight: 900;
+  font-size: 4em;
+  margin-bottom: 0; }
+  @media only screen and (max-width: 768px) {
+    h1 {
+      font-size: 3em; } }
+
+.titles {
+  padding-left: 100px; }
+  .titles hr {
+    margin-top: 2.5%;
+    margin-left: -90px;
+    position: absolute; }
+    @media only screen and (max-width: 768px) {
+      .titles hr {
+        margin-right: 105px;
+        width: 43px; } }
+  .titles h2 {
+    font-size: 3.5em;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    z-index: 2;
+    text-shadow: 10px 10px 0px rgba(239, 239, 239, 0.85); }
+    @media only screen and (max-width: 768px) {
+      .titles h2 {
+        font-size: 2.3em;
+        text-align: start;
+        letter-spacing: none; } }
+
+h3 {
+  font-weight: 600;
+  font-size: 1.35em;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin-bottom: 5%; }
+  @media only screen and (max-width: 768px) {
+    h3 {
+      font-size: 1em;
+      margin-bottom: 10%; } }
+
+button {
+  border: 4px solid #a5a5a5;
+  background-color: #a5a5a5;
+  color: #F7F7F7;
+  border-radius: 50px;
+  padding: 0 1.5em 0 1.5em;
+  width: 110px !important;
+  height: 35px;
+  margin-top: 5%; }
+  button:hover {
+    background-color: #0f4c81;
+    color: white;
+    border: none; }
+  @media only screen and (max-width: 768px) {
+    button {
+      margin: 10%; } }
+
+ion-icon {
+  font-size: 25px;
   margin-right: 15px; }
 
 .animate__animated {
   --animate-duration: 3s; }
 
 header {
-  background: #FFFFFF;
   border-right: 2px solid #F7F7F7;
   width: 20%;
   position: fixed;
@@ -203,24 +206,21 @@ header {
       width: 20%;
       height: 100%; } }
   header .logo {
-    display: flex;
     width: 80%;
+    display: flex;
     justify-content: space-around;
-    margin-top: 5%;
-    margin-left: 5%;
-    align-items: center; }
+    align-items: center;
+    margin: 5% 0 0 5%; }
     header .logo .circle {
       height: 45px;
       width: 45px;
-      border: 2px solid black;
       border-radius: 50%;
+      font-size: 2em;
+      border: 2px solid #282721;
       display: flex;
       justify-content: center;
-      text-align: center;
-      align-items: center;
-      font-size: 2em; }
+      align-items: center; }
     header .logo span p {
-      font-family: 'Roboto', sans-serif;
       font-weight: 900;
       font-size: 1.25em;
       margin-top: 15px; }
@@ -230,11 +230,9 @@ header {
   header .link {
     display: flex;
     flex-direction: column;
-    width: 80%;
     justify-content: space-around;
-    margin-left: 10%;
-    margin-top: 35px;
-    margin-bottom: 0; }
+    width: 80%;
+    margin: 35px 0 0 10%; }
     header .link .item_logo {
       margin-bottom: 7%;
       display: flex;
@@ -247,11 +245,9 @@ header {
           header .link .item_logo img {
             margin-right: 0px; } }
       header .link .item_logo span {
-        font-family: 'Roboto', sans-serif;
         font-weight: 700;
         font-size: 1.25em;
-        text-decoration: none;
-        color: black; }
+        text-decoration: none; }
         @media only screen and (max-width: 768px) {
           header .link .item_logo span {
             display: none; } }
@@ -263,7 +259,7 @@ nav {
   top: 15px;
   width: 100%;
   display: flex;
-  justify-content: flex-end !important;
+  justify-content: flex-end;
   align-items: center;
   vertical-align: middle; }
   @media only screen and (max-width: 768px) {
@@ -280,11 +276,9 @@ nav {
       font-size: 1.3em; }
 
 a {
-  color: black;
   text-decoration: none; }
   a:hover {
-    color: black;
-    font-weight: 800;
+    font-weight: 700;
     text-decoration: none; }
 
 footer {
@@ -307,25 +301,22 @@ footer {
     footer .logo .circle {
       height: 45px;
       width: 45px;
-      border: 2px solid black;
+      border: 2px solid #282721;
       border-radius: 50%;
       display: flex;
       justify-content: center;
-      text-align: center;
       align-items: center;
       font-size: 2em; }
     footer .logo span {
-      font-family: 'Roboto', sans-serif;
       font-weight: 800;
       font-size: 1.25em;
-      text-decoration: none;
-      color: black; }
+      text-decoration: none; }
       @media only screen and (max-width: 768px) {
         footer .logo span {
           display: none; } }
   footer .link {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center; }
     footer .link .item_logo {
       display: flex; }
@@ -336,10 +327,10 @@ footer {
     height: 70px;
     z-index: 1;
     top: 0;
-    width: 100%;
     left: 0;
+    margin-right: 5%;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center; }
     @media only screen and (max-width: 768px) {
       footer ul {
@@ -347,22 +338,28 @@ footer {
     footer ul li {
       display: inline;
       list-style: none;
-      margin: 20px; }
+      margin: 20px;
+      font-weight: 600; }
       @media only screen and (max-width: 768px) {
         footer ul li {
           font-size: small;
           margin: 10%; } }
   footer .make_myp {
-    text-align: end; }
+    text-align: end;
+    margin-right: 10%; }
     footer .make_myp p {
       font-weight: 700;
       color: #0f4c81;
-      font-size: 13px; }
+      font-size: 13px;
+      font-style: italic; }
 
 body, html {
   height: 100%;
   margin: 0;
   font-family: 'Roboto', sans-serif;
+  color: #282721; }
+
+span, a {
   color: #282721; }
 
 .container {
@@ -429,8 +426,8 @@ h3 {
       margin-bottom: 10%; } }
 
 button {
-  border: 4px solid #A5A5A5;
-  background-color: #A5A5A5;
+  border: 4px solid #a5a5a5;
+  background-color: #a5a5a5;
   color: #F7F7F7;
   border-radius: 50px;
   padding: 0 1.5em 0 1.5em;
@@ -447,7 +444,6 @@ button {
 
 ion-icon {
   font-size: 25px;
-  color: white;
   margin-right: 15px; }
 
 .animate__animated {
@@ -636,6 +632,9 @@ body, html {
   font-family: 'Roboto', sans-serif;
   color: #282721; }
 
+span, a {
+  color: #282721; }
+
 .container {
   width: 75%;
   position: relative;
@@ -700,8 +699,8 @@ h3 {
       margin-bottom: 10%; } }
 
 button {
-  border: 4px solid #A5A5A5;
-  background-color: #A5A5A5;
+  border: 4px solid #a5a5a5;
+  background-color: #a5a5a5;
   color: #F7F7F7;
   border-radius: 50px;
   padding: 0 1.5em 0 1.5em;
@@ -718,7 +717,6 @@ button {
 
 ion-icon {
   font-size: 25px;
-  color: white;
   margin-right: 15px; }
 
 .animate__animated {
@@ -837,6 +835,9 @@ body, html {
   font-family: 'Roboto', sans-serif;
   color: #282721; }
 
+span, a {
+  color: #282721; }
+
 .container {
   width: 75%;
   position: relative;
@@ -901,8 +902,8 @@ h3 {
       margin-bottom: 10%; } }
 
 button {
-  border: 4px solid #A5A5A5;
-  background-color: #A5A5A5;
+  border: 4px solid #a5a5a5;
+  background-color: #a5a5a5;
   color: #F7F7F7;
   border-radius: 50px;
   padding: 0 1.5em 0 1.5em;
@@ -919,7 +920,6 @@ button {
 
 ion-icon {
   font-size: 25px;
-  color: white;
   margin-right: 15px; }
 
 .animate__animated {
@@ -1049,6 +1049,9 @@ body, html {
   font-family: 'Roboto', sans-serif;
   color: #282721; }
 
+span, a {
+  color: #282721; }
+
 .container {
   width: 75%;
   position: relative;
@@ -1113,8 +1116,8 @@ h3 {
       margin-bottom: 10%; } }
 
 button {
-  border: 4px solid #A5A5A5;
-  background-color: #A5A5A5;
+  border: 4px solid #a5a5a5;
+  background-color: #a5a5a5;
   color: #F7F7F7;
   border-radius: 50px;
   padding: 0 1.5em 0 1.5em;
@@ -1131,7 +1134,6 @@ button {
 
 ion-icon {
   font-size: 25px;
-  color: white;
   margin-right: 15px; }
 
 .animate__animated {
