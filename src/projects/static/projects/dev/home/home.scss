@@ -2,14 +2,7 @@
 @import "../variables.scss";
 
 // -> PAGE ACCUEIL
-.container {
-    width: 75%;
-    position: relative;
-    z-index: 3;
-    margin: 1% 0 0 17%;
-    @media #{$medium-up}{ 
-        margin-left:none;
-    }
+
     // Header
     .header{
         display: flex;
@@ -41,12 +34,12 @@
             }
         }
         div{
+            
             width: 70%;
             display: flex;
             justify-content: start;
             flex-direction: column;
             margin-left: 2%;
-            border:2px solid red;
             @media #{$medium-up}{ 
                 width: auto;
                 text-align: center;
@@ -183,7 +176,7 @@
             }
         }    
     }         
-}
+
     // Contact
      section{
         .title-contact{

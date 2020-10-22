@@ -11,6 +11,15 @@ hr {
   border: 4px solid #0f4c81;
   width: 53px; }
 
+.container {
+  width: 75%;
+  position: relative;
+  z-index: 3;
+  margin: 1% 0 0 17%; }
+  @media only screen and (max-width: 768px) {
+    .container {
+      margin-left: none; } }
+
 .project {
   margin-bottom: -4%;
   margin-left: 2.5%; }
@@ -99,6 +108,15 @@ h1, h2, h3, p, a, span {
 hr {
   border: 4px solid #0f4c81;
   width: 53px; }
+
+.container {
+  width: 75%;
+  position: relative;
+  z-index: 3;
+  margin: 1% 0 0 17%; }
+  @media only screen and (max-width: 768px) {
+    .container {
+      margin-left: none; } }
 
 .project {
   margin-bottom: -4%;
@@ -362,6 +380,15 @@ hr {
   border: 4px solid #0f4c81;
   width: 53px; }
 
+.container {
+  width: 75%;
+  position: relative;
+  z-index: 3;
+  margin: 1% 0 0 17%; }
+  @media only screen and (max-width: 768px) {
+    .container {
+      margin-left: none; } }
+
 .project {
   margin-bottom: -4%;
   margin-left: 2.5%; }
@@ -438,170 +465,164 @@ ion-icon {
 .animate__animated {
   --animate-duration: 3s; }
 
-.container {
-  width: 75%;
-  position: relative;
-  z-index: 3;
-  margin: 1% 0 0 17%; }
+.header {
+  display: flex;
+  align-items: center; }
   @media only screen and (max-width: 768px) {
-    .container {
-      margin-left: none; } }
-  .container .header {
-    display: flex;
-    align-items: center; }
-    @media only screen and (max-width: 768px) {
-      .container .header {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; } }
-    .container .header .profil_picture {
-      height: 550px;
-      width: auto;
-      border-radius: 13px;
-      margin-right: 3%;
-      box-shadow: 14px 15px 31px #F2F2F2; }
-      @media only screen and (max-width: 768px) {
-        .container .header .profil_picture {
-          height: 350px !important;
-          width: 250px !important; } }
-    .container .header span {
-      border: 2px solid transparent;
-      margin-bottom: 15%; }
-      .container .header span .hr_title {
-        margin-top: 35%; }
-        @media only screen and (max-width: 768px) {
-          .container .header span .hr_title {
-            position: absolute;
-            margin-top: 14%;
-            margin-left: -7%; } }
-    .container .header div {
-      width: 70%;
+    .header {
       display: flex;
-      justify-content: start;
       flex-direction: column;
-      margin-left: 2%;
-      border: 2px solid red; }
-      @media only screen and (max-width: 768px) {
-        .container .header div {
-          width: auto;
-          text-align: center;
-          align-items: center;
-          margin-top: 7%; } }
-      .container .header div p {
-        font-size: 0.75em;
-        width: 80%; }
-  .container .view_project {
-    position: absolute;
-    margin-left: 100%;
-    margin-top: -10%;
-    writing-mode: vertical-rl;
-    text-orientation: mixed; }
+      justify-content: center;
+      align-items: center; } }
+  .header .profil_picture {
+    height: 550px;
+    width: auto;
+    border-radius: 13px;
+    margin-right: 3%;
+    box-shadow: 14px 15px 31px #F2F2F2; }
     @media only screen and (max-width: 768px) {
-      .container .view_project {
-        display: none; } }
-    .container .view_project span {
-      text-transform: uppercase;
-      font-size: small;
-      color: #0f4c81;
-      font-weight: normal; }
-  .container section .title_work {
-    margin-top: 10%; }
-  .container section .projets_all {
-    flex-direction: column;
-    width: 100%;
-    margin: 5% 0 10% 0; }
-    .container section .projets_all .box {
-      display: flex;
-      flex-direction: row;
-      justify-content: center; }
+      .header .profil_picture {
+        height: 350px !important;
+        width: 250px !important; } }
+  .header span {
+    border: 2px solid transparent;
+    margin-bottom: 15%; }
+    .header span .hr_title {
+      margin-top: 35%; }
       @media only screen and (max-width: 768px) {
-        .container section .projets_all .box {
-          flex-direction: column; } }
-      .container section .projets_all .box .box1, .container section .projets_all .box .box2 {
-        width: auto;
-        margin: 5%; }
-        .container section .projets_all .box .box1 .image, .container section .projets_all .box .box2 .image {
-          position: relative;
-          background-size: contain;
-          background-clip: content-box;
-          border-radius: 20px;
-          background-position: center;
-          margin: 7%;
-          overflow: hidden; }
-        .container section .projets_all .box .box1 .image__title, .container section .projets_all .box .box2 .image__title {
+        .header span .hr_title {
           position: absolute;
-          left: 0px;
-          right: 0;
-          bottom: 0;
-          height: 100%;
-          width: 100%;
-          margin-left: 0;
-          display: flex;
-          justify-content: flex-start;
-          align-items: flex-end;
-          background-color: #0f4c81;
-          opacity: 0;
-          transition: all 0.4s ease 0s; }
-          .container section .projets_all .box .box1 .image__title p, .container section .projets_all .box .box2 .image__title p {
-            color: white;
-            font-size: 1.5em;
-            font-weight: 700;
-            padding: 1em; }
-        .container section .projets_all .box .box1 .image:hover .image__title, .container section .projets_all .box .box2 .image:hover .image__title {
-          opacity: 0.80; }
-      .container section .projets_all .box .box1 {
-        justify-content: flex-end; }
-      .container section .projets_all .box .box2 {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; }
-      .container section .projets_all .box .projet1 {
-        width: 550px; }
-        @media only screen and (max-width: 768px) {
-          .container section .projets_all .box .projet1 {
-            width: 300px; } }
-        .container section .projets_all .box .projet1 img {
-          background-position: center;
-          width: 550px; }
-          @media only screen and (max-width: 768px) {
-            .container section .projets_all .box .projet1 img {
-              width: 300px; } }
-      .container section .projets_all .box .projet2 {
-        width: 450px;
-        height: auto;
-        margin-left: 29% !important; }
-        @media only screen and (max-width: 768px) {
-          .container section .projets_all .box .projet2 {
-            margin-left: 30px !important;
-            width: 300px; } }
-        .container section .projets_all .box .projet2 img {
-          background-position: center;
-          width: 450px; }
-          @media only screen and (max-width: 768px) {
-            .container section .projets_all .box .projet2 img {
-              width: 300px; } }
-      .container section .projets_all .box .projet3 {
-        width: 310px; }
-        .container section .projets_all .box .projet3 img {
-          background-position: center;
-          width: 310px; }
-      .container section .projets_all .box .all_project {
-        width: 200px;
-        height: 70px;
-        background-color: #0f4c81;
-        padding: 1em;
-        margin: 50px 0 50px 0;
-        border-radius: 12px;
-        display: flex;
-        justify-content: center;
+          margin-top: 14%;
+          margin-left: -7%; } }
+  .header div {
+    width: 70%;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    margin-left: 2%; }
+    @media only screen and (max-width: 768px) {
+      .header div {
+        width: auto;
+        text-align: center;
         align-items: center;
-        cursor: pointer; }
-        .container section .projets_all .box .all_project p {
+        margin-top: 7%; } }
+    .header div p {
+      font-size: 0.75em;
+      width: 80%; }
+
+.view_project {
+  position: absolute;
+  margin-left: 100%;
+  margin-top: -10%;
+  writing-mode: vertical-rl;
+  text-orientation: mixed; }
+  @media only screen and (max-width: 768px) {
+    .view_project {
+      display: none; } }
+  .view_project span {
+    text-transform: uppercase;
+    font-size: small;
+    color: #0f4c81;
+    font-weight: normal; }
+
+section .title_work {
+  margin-top: 10%; }
+
+section .projets_all {
+  flex-direction: column;
+  width: 100%;
+  margin: 5% 0 10% 0; }
+  section .projets_all .box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    @media only screen and (max-width: 768px) {
+      section .projets_all .box {
+        flex-direction: column; } }
+    section .projets_all .box .box1, section .projets_all .box .box2 {
+      width: auto;
+      margin: 5%; }
+      section .projets_all .box .box1 .image, section .projets_all .box .box2 .image {
+        position: relative;
+        background-size: contain;
+        background-clip: content-box;
+        border-radius: 20px;
+        background-position: center;
+        margin: 7%;
+        overflow: hidden; }
+      section .projets_all .box .box1 .image__title, section .projets_all .box .box2 .image__title {
+        position: absolute;
+        left: 0px;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        margin-left: 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        background-color: #0f4c81;
+        opacity: 0;
+        transition: all 0.4s ease 0s; }
+        section .projets_all .box .box1 .image__title p, section .projets_all .box .box2 .image__title p {
           color: white;
           font-size: 1.5em;
-          font-weight: 700; }
+          font-weight: 700;
+          padding: 1em; }
+      section .projets_all .box .box1 .image:hover .image__title, section .projets_all .box .box2 .image:hover .image__title {
+        opacity: 0.80; }
+    section .projets_all .box .box1 {
+      justify-content: flex-end; }
+    section .projets_all .box .box2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+    section .projets_all .box .projet1 {
+      width: 550px; }
+      @media only screen and (max-width: 768px) {
+        section .projets_all .box .projet1 {
+          width: 300px; } }
+      section .projets_all .box .projet1 img {
+        background-position: center;
+        width: 550px; }
+        @media only screen and (max-width: 768px) {
+          section .projets_all .box .projet1 img {
+            width: 300px; } }
+    section .projets_all .box .projet2 {
+      width: 450px;
+      height: auto;
+      margin-left: 29% !important; }
+      @media only screen and (max-width: 768px) {
+        section .projets_all .box .projet2 {
+          margin-left: 30px !important;
+          width: 300px; } }
+      section .projets_all .box .projet2 img {
+        background-position: center;
+        width: 450px; }
+        @media only screen and (max-width: 768px) {
+          section .projets_all .box .projet2 img {
+            width: 300px; } }
+    section .projets_all .box .projet3 {
+      width: 310px; }
+      section .projets_all .box .projet3 img {
+        background-position: center;
+        width: 310px; }
+    section .projets_all .box .all_project {
+      width: 200px;
+      height: 70px;
+      background-color: #0f4c81;
+      padding: 1em;
+      margin: 50px 0 50px 0;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer; }
+      section .projets_all .box .all_project p {
+        color: white;
+        font-size: 1.5em;
+        font-weight: 700; }
 
 section .title-contact {
   margin-left: 40%; }
@@ -634,6 +655,15 @@ h1, h2, h3, p, a, span {
 hr {
   border: 4px solid #0f4c81;
   width: 53px; }
+
+.container {
+  width: 75%;
+  position: relative;
+  z-index: 3;
+  margin: 1% 0 0 17%; }
+  @media only screen and (max-width: 768px) {
+    .container {
+      margin-left: none; } }
 
 .project {
   margin-bottom: -4%;
@@ -830,6 +860,15 @@ h1, h2, h3, p, a, span {
 hr {
   border: 4px solid #0f4c81;
   width: 53px; }
+
+.container {
+  width: 75%;
+  position: relative;
+  z-index: 3;
+  margin: 1% 0 0 17%; }
+  @media only screen and (max-width: 768px) {
+    .container {
+      margin-left: none; } }
 
 .project {
   margin-bottom: -4%;
@@ -1037,6 +1076,15 @@ h1, h2, h3, p, a, span {
 hr {
   border: 4px solid #0f4c81;
   width: 53px; }
+
+.container {
+  width: 75%;
+  position: relative;
+  z-index: 3;
+  margin: 1% 0 0 17%; }
+  @media only screen and (max-width: 768px) {
+    .container {
+      margin-left: none; } }
 
 .project {
   margin-bottom: -4%;
