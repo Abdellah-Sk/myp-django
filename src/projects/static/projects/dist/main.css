@@ -773,16 +773,16 @@ section .all_projects {
           position: relative;
           width: 60%; } }
       section .all_projects .box_project .projet_contents .projet_name {
-        color: #FFFFFF;
+        color: white;
         font-size: 1.5em;
         font-weight: 700;
         margin-top: 0; }
       section .all_projects .box_project .projet_contents .projet_description {
-        color: #FFFFFF;
+        color: white;
         font-size: 0.8em; }
       section .all_projects .box_project .projet_contents .projet_linkPage {
         font-style: oblique;
-        color: #FFFFFF; }
+        color: white; }
     section .all_projects .box_project .projet_techno {
       color: #A5A5A5;
       text-decoration: none;
@@ -817,7 +817,7 @@ section .container_pagination {
   justify-content: center;
   align-items: center; }
   section .container_pagination .pagination li {
-    color: black;
+    color: #282721;
     float: left;
     padding: 8px 16px;
     text-decoration: none;
