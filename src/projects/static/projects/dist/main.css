@@ -962,10 +962,10 @@ ion-icon {
           width: 80%;
           margin-top: 10%; } }
       .singleProjet_content .singleProjet .singleProjet_description hr {
-        border: 2px solid #0f4c81;
-        width: 43px;
+        border: 3px solid #0f4c81;
+        width: 40px;
         position: relative;
-        top: 9%;
+        top: 15px;
         margin: 0 0 -2% -7%; }
         @media only screen and (max-width: 768px) {
           .singleProjet_content .singleProjet .singleProjet_description hr {
@@ -1019,10 +1019,10 @@ ion-icon {
       width: 40%;
       padding: 1em; }
       .singleProjet_content .singleProjet_details .singleProjet_tech hr {
-        border: 2px solid #0f4c81;
+        border: 3px solid #0f4c81;
         width: 43px;
         position: relative;
-        top: 16%;
+        top: 27px;
         margin: 0 0 -2% -20%; }
         @media only screen and (max-width: 768px) {
           .singleProjet_content .singleProjet_details .singleProjet_tech hr {
@@ -1031,15 +1031,15 @@ ion-icon {
             left: -5%;
             width: 23px; } }
       .singleProjet_content .singleProjet_details .singleProjet_tech li {
-        font-weight: 700;
-        font-family: 'Roboto', sans-serif; }
+        font-weight: 700; }
         @media only screen and (max-width: 768px) {
           .singleProjet_content .singleProjet_details .singleProjet_tech li {
             width: 150px;
             padding: 0.5em; } }
   .singleProjet_content .back {
     margin: 5%;
-    text-align: center; }
+    text-align: center;
+    font-weight: 600; }
     .singleProjet_content .back a :hover {
       color: #0f4c81; }
 

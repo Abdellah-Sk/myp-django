@@ -39,10 +39,10 @@
                 margin-top: 10%;
             }
             hr{
-                border:2px solid $color_primary;
-                width: 43px;
+                border:3px solid $first_color;
+                width: 40px;
                 position: relative;
-                top: 9% ;
+                top: 15px ;
                 margin: 0 0 -2% -7%;
                 @media #{$medium-up}{
                     top: 20px;
@@ -76,7 +76,7 @@
             padding: 1em;
             @include display-column;
             line-height: 50px;
-            background-color: $color_primary;
+            background-color: $first_color;
             border-radius: 15px;
             vertical-align: middle;
             @media #{$medium-up}{
@@ -91,7 +91,7 @@
                 }
                 a{
                     font-size: large;
-                    color: white;
+                    color: $white_color;
                     @media #{$medium-up}{
                         font-size: medium;
                     }
@@ -103,10 +103,10 @@
             width: 40%;
             padding: 1em;
             hr{
-                border:2px solid $color_primary;
+                border:3px solid $first_color;
                 width: 43px;
                 position: relative;
-                top: 16% ;
+                top: 27px ;
                 margin :0 0 -2% -20%;
                 @media #{$medium-up}{
                     margin-top: 2%;
@@ -117,7 +117,6 @@
             }
             li{
                 font-weight: 700;
-                font-family: 'Roboto', sans-serif;
                 @media #{$medium-up}{
                     width: 150px;
                     padding: 0.5em;
@@ -129,8 +128,9 @@
     .back{
         margin: 5%;
         text-align: center;
+        font-weight: 600;
         a :hover{
-            color:$color_primary;
+            color:$first_color;
         }
     }
 }
