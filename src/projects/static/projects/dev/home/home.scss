@@ -58,7 +58,7 @@
     span{
         text-transform: uppercase;
         font-size: small;
-        color:$color_primary;
+        color:$first_color;
         font-weight: normal;
     }
 }
@@ -99,11 +99,11 @@ section{
                     display: flex;
                     justify-content: flex-start;
                     align-items: flex-end;
-                    background-color: $color_primary;
+                    background-color: $first_color;
                     opacity: 0;
                     transition: all 0.4s ease 0s; 
                     p{
-                        color: white;
+                        color: $white_color;
                         font-size: 1.5em;
                         font-weight: 700;
                         padding: 1em;
@@ -152,14 +152,14 @@ section{
                 .all_project{
                     width: 200px;
                     height: 70px;
-                    background-color: $color_primary;
+                    background-color: $first_color;
                     padding: 1em;
                     margin: 50px 0 50px 0;
                     border-radius: 12px;
                     @include display-center;
                     cursor: pointer;
                     p{
-                        color: white;
+                        color: $white_color;
                         font-size: 1.5em;
                         font-weight: 700;
                     }
