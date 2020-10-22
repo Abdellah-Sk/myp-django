@@ -103,7 +103,7 @@ a{
 // -> Footer
 footer{
     
-    border-top : 2px solid $border;;
+    border-top : 2px solid $border_color;;
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -111,7 +111,7 @@ footer{
     position: relative;
     margin-bottom:0;
     height: 20%;
-    background-color: $background; 
+    background-color: $white_color; 
     .logo{
         display: flex;
         width: 110%;

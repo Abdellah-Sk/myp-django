@@ -182,10 +182,10 @@ section{
         padding: 1em;
         p{
             font-size: 1.5em;
-            font-weight: 700;
+            font-weight: 500;
             span:hover{
                 text-decoration: underline;
-                color: $color_primary;
+                color: $first_color;
             }
         }
     }
