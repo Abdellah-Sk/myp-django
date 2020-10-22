@@ -3,135 +3,127 @@
 
 // -> PAGE ACCUEIL
 
-    // Header
-    .header{
-        display: flex;
-        align-items: center;
-        @media #{$medium-up}{ 
-            @include display-column;
+// Header : profil
+.header{
+    display: flex;
+    align-items: center;
+    @media #{$medium-up}{ 
+        @include display-column;
+    }
+    .profil_picture {
+        height: 550px;
+        width: auto;
+        border-radius: 13px;
+        margin-right: 3%;
+        box-shadow: 14px 15px 31px #F2F2F2;
+        @media #{$medium-up}{
+            height: 350px !important; 
+            width: 250px !important;  
         }
-        .profil_picture {
-            height: 550px;
-            width: auto;
-            border-radius: 13px;
-            margin-right: 3%;
-            box-shadow: 14px 15px 31px #F2F2F2;
-            @media #{$medium-up}{
-                height: 350px !important; 
-                width: 250px !important;  
-            }
-        }
-        span{
-            border:2px solid transparent;
-            margin-bottom: 15%;
-            .hr_title{
-                margin-top: 35%;
-                @media #{$medium-up}{ 
-                    position: absolute;
-                    margin-top: 14%;
-                    margin-left: -7%;
-                }
-            }
-        }
-        div{
-            
-            width: 70%;
-            display: flex;
-            justify-content: start;
-            flex-direction: column;
-            margin-left: 2%;
+    }
+    span{
+        border:2px solid transparent;
+        margin-bottom: 15%;
+        .hr_title{
+            margin-top: 35%;
             @media #{$medium-up}{ 
-                width: auto;
-                text-align: center;
-                align-items: center;
-                margin-top: 7%;
+                position: absolute;
+                margin-top: 14%;
+                margin-left: -7%;
             }
-            p{font-size: 0.75em; width: 80%;}
-        } 
-    }
-    .view_project{
-        position: absolute;
-        margin-left: 100%;
-        margin-top: -10%;
-        writing-mode: vertical-rl;
-        text-orientation: mixed;
-        @media #{$medium-up}{display: none;}
-        span{
-            text-transform: uppercase;
-            font-size: small;
-            color:$color_primary;
-            font-weight: normal;
         }
     }
-    // Projet
-    section{
-        .title_work{margin-top: 10%;}
-        .projets_all{
-            flex-direction: column;
-            width: 100%;
-            margin :5% 0 10% 0;
-            .box{
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                @media #{$medium-up}{ 
-                    flex-direction: column;
+    div{
+        width: 70%;
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        margin-left: 2%;
+        @media #{$medium-up}{ 
+            width: auto;
+            text-align: center;
+            align-items: center;
+            margin-top: 7%;
+        }
+        p{font-size: 0.75em; width: 80%;}
+    } 
+}
+// fleche "voir projet"
+.view_project{
+    position: absolute;
+    margin: -10% 0 0 100%;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    @media #{$medium-up}{display: none;}
+    span{
+        text-transform: uppercase;
+        font-size: small;
+        color:$color_primary;
+        font-weight: normal;
+    }
+}
+// Projet
+section{
+    .title_work{margin-top: 10%;}
+    .projets_all{
+        flex-direction: column;
+        width: 100%;
+        margin :5% 0 10% 0;
+        .box{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            @media #{$medium-up}{ 
+                flex-direction: column;
+            }
+            .box1,.box2{
+                width: auto;
+                margin:5%;
+                .image{
+                    position: relative;
+                    background-size: contain;
+                    background-clip: content-box;
+                    border-radius: 20px;
+                    background-position: center;
+                    margin: 7%;
+                    overflow: hidden;
                 }
-                .box1,.box2{
-                    width: auto;
-                    margin:5%;
-                    .image{
-                        position: relative;
-                        background-size: contain;
-                        background-clip: content-box;
-                        border-radius: 20px;
-                        background-position: center;
-                        margin: 7%;
-                        overflow: hidden;
+                .image__title{
+                    position: absolute;
+                    left: 0px;
+                    right: 0;
+                    bottom: 0;
+                    height: 100%;
+                    width: 100%;
+                    margin-left: 0;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-end;
+                    background-color: $color_primary;
+                    opacity: 0;
+                    transition: all 0.4s ease 0s; 
+                    p{
+                        color: white;
+                        font-size: 1.5em;
+                        font-weight: 700;
+                        padding: 1em;
                     }
-                    .image__title{
-                        position: absolute;
-                        left: 0px;
-                        right: 0;
-                        bottom: 0;
-                        height: 100%;
-                        width: 100%;
-                        margin-left: 0;
-                        display: flex;
-                        justify-content: flex-start;
-                        align-items: flex-end;
-                        background-color: $color_primary;
-                        opacity: 0;
-                        transition: all 0.4s ease 0s; 
-                        p{
-                            color: white;
-                            font-size: 1.5em;
-                            font-weight: 700;
-                            padding: 1em;
-                        }
-                    }
-                    .image:hover .image__title{
-                        opacity: 0.80;
-                    }                      
                 }
-                .box1{ 
-                    justify-content: flex-end;
+                .image:hover .image__title{
+                    opacity: 0.80;
+                }                      
                 }
-                .box2{ 
-                    @include display-column;
-                    }
+                .box1{ justify-content: flex-end;}
+                .box2{ @include display-column;}
                 .projet1{
                     width: 550px;
                     @media #{$medium-up}{ 
                         width: 300px;
                     }
-
                     img{
                         background-position: center;
                         width: 550px;
-                        @media #{$medium-up}{ 
-                            width: 300px;
-                        }
+                        @media #{$medium-up}{ width: 300px;}
                     } 
                 }
                 .projet2{
@@ -177,27 +169,27 @@
         }    
     }         
 
-    // Contact
-     section{
-        .title-contact{
-            margin-left: 40%;
-            @media #{$medium-up}{ margin-left: 20%; }
-                hr{margin-top: 5%;}
+// Contact
+section{
+    .title-contact{
+        margin-left: 40%;
+        @media #{$medium-up}{ margin-left: 20%; }
+            hr{margin-top: 5%;}
         }
-        .intro_contact{
-            margin: 10% 5%;
-            text-align: center;
-            padding: 1em;
-            p{
-                font-size: 1.5em;
-                font-weight: 700;
-                span:hover{
-                    text-decoration: underline;
-                    color: $color_primary;
-                }
+    .intro_contact{
+        margin: 10% 5%;
+        text-align: center;
+        padding: 1em;
+        p{
+            font-size: 1.5em;
+            font-weight: 700;
+            span:hover{
+                text-decoration: underline;
+                color: $color_primary;
             }
         }
     }
+}
 
 
 
