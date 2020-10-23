@@ -37,6 +37,5 @@ urlpatterns = [
     path('error500', error500, name='error500'),
     re_path(r'^projects/(?P<id>[0-9]+)$', details, name='details'),
     path('contact', contact, name='contact'),
-    path('success', success, name='success'),
     path('admin', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
