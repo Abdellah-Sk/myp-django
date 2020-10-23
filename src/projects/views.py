@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import Project
 from .form import ContactForm
+from django.contrib import messages
 
 
 def index(request):
@@ -56,8 +57,9 @@ def contact(request):
                 x.send()
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
-            return redirect('success')
-
+            messages.success(request, "Message envoyé.")
+            return redirect('home')
+        messages.error(request, "Erreur. Message non envoyé.")
     return render(request, "projects/contact.html", {'form': form})
 
 
