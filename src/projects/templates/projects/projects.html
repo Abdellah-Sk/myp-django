@@ -15,7 +15,7 @@
 
   <div class="all_projects">
       {% for project in x %}
-          {% if forloop.counter0|divisibleby:2 %}
+          {% if forloop.counter|divisibleby:2 %}
               <div class="box_project right">
                           <img class="" src="{{project.image.url}}" alt="">
           <div class="projet_contents">
