@@ -26,11 +26,12 @@ section{
             @media #{$medium-up}{
                 width: 90%;
                 height: auto;
-                display: flex;
-                flex-direction: column;
                 padding: auto;
-                justify-content: center;
-                align-items: center;
+                // display: flex;
+                // flex-direction: column;
+                // justify-content: center;
+                // align-items: center;
+                @include display-column;
             }
             img{
                 z-index: 1;
