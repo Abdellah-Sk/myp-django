@@ -19,9 +19,7 @@
         @include display-column;
         @media #{$medium-up}{ 
             width: 90%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include display-center;
         }
         img{
             width: 90%;
