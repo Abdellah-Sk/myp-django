@@ -928,10 +928,12 @@ section .container_pagination {
     text-decoration: none;
     list-style: none; }
   section .container_pagination .pagination a:hover:not(.active) {
-    font-weight: 900; }
-  section .container_pagination .active {
-    background-color: #0f4c81;
-    color: white !important;
+    font-weight: 900;
+    color: #0f4c81; }
+  section .container_pagination .arrow {
+    padding: 1em;
+    background-color: #a5a5a5;
+    opacity: 0.25;
     border-radius: 5px; }
 
 body, html {

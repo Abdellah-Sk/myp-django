@@ -129,10 +129,11 @@ section{
             text-decoration: none;
             list-style: none;
         }
-        .pagination a:hover:not(.active) {font-weight: 900;}
-        .active {
-            background-color:$first_color; 
-            color: white !important;
+        .pagination a:hover:not(.active) {font-weight: 900; color: $first_color ;}
+        .arrow{
+            padding: 1em;
+            background-color: $third_color;
+            opacity: 0.25;
             border-radius: 5px;
         }
     }
