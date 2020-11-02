@@ -2,6 +2,8 @@
 
 {% block content %}
 {% load static %}
+    {% include 'projects/messages.html' %}
+
     {# Header #}
     <section class="header animate__animated animate__fadeInLeft">
         <img class="profil_picture" src="{% static 'projects/img/profile.jpg' %}"/>
@@ -20,7 +22,7 @@
         <img  src="{% static 'projects/img/icon-arrow.png' %}"/>
     </div>
     {# WORK #}
-    <section ><br> 
+    <section><br>
         <div class="titles title_work" 
              data-aos="fade-right" 
              data-aos-duration="1000"
@@ -58,7 +60,7 @@
                     </div>
                 </div>
                 <div class="box2">
-                    <a href="/project">
+                    <a href="{% url 'projects' %}">
                         <div class="all_project">
                             <p>En voir plus </p>
                         </div>
@@ -68,13 +70,14 @@
                         <a href="{% url 'details' project3.id %}" >
                         <img  src="{{project3.image.url}}" alt="">
 
-                        <div class="image__title">                       
+                        <div class="image__title">
                             <p class="projet_name">{{project3.title}}</p>
                             {# <p>{{project3.excerpt}}</p> #}
-                            </a>
+                        </div>
+                        </a>
                         </div>
                     </div>
-                </div>    
+                </div>
             </div>
     </section>
 

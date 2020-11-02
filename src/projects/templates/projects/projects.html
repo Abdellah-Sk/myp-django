@@ -14,28 +14,45 @@
   </div>
 
   <div class="all_projects">
-    {% for project in x %}
-    <div class="box_project">  
-      <img class="" src="{{project.image.url}}" alt="">
-      <div class="projet_contents">
-        <p class="projet_name">{{project.title}}</p>
-        <p class="projet_description">{{project.excerpt}}</p>
-        <a href="{% url 'details' project.id %}" class="projet_linkPage">En savoir plus &#8594;</a>
-      </div>
-      {% for tech in project.technology.all %}
-        {% if forloop.first %}
-          <li class="projet_techno">{{tech}}</li>
-        {% endif %}
-      {% endfor %} <br>
-    </div>
-    {% endfor %}
+      {% for project in x %}
+          {% if forloop.counter|divisibleby:2 %}
+              <div class="box_project right">
+                          <img class="" src="{{project.image.url}}" alt="">
+          <div class="projet_contents">
+          <p class="projet_name">{{project.title}}</p>
+          <p class="projet_description">{{project.excerpt}}</p>
+          <a href="{% url 'details' project.id %}" class="projet_linkPage">En savoir plus &#8594;</a>
+          </div>
+          {% for tech in project.technology.all %}
+              {% if forloop.first %}
+                  <li class="projet_techno">{{tech}}</li>
+              {% endif %}
+          {% endfor %}
+              </div>
+          {% else %}
+              <div class="box_project">
+                          <img class="" src="{{project.image.url}}" alt="">
+          <div class="projet_contents">
+          <p class="projet_name">{{project.title}}</p>
+          <p class="projet_description">{{project.excerpt}}</p>
+          <a href="{% url 'details' project.id %}" class="projet_linkPage">En savoir plus &#8594;</a>
+          </div>
+          {% for tech in project.technology.all %}
+              {% if forloop.first %}
+                  <li class="projet_techno">{{tech}}</li>
+              {% endif %}
+          {% endfor %}
+              </div>
+          {% endif %}
+      {% endfor %}
+
   </div>
 
   <div class="container_pagination" >
     {% if x.has_other_pages %}
     <ul class="pagination">
       {% if x.has_previous %}
-      <li><a class="arrow"href="?page={{ x.previous_page_number }}">&laquo;</a></li>
+      <li><a class="arrow" href="?page={{ x.previous_page_number }}">&laquo;</a></li>
         {% else %}
         <li class="disabled" ><span>&laquo;</span></li>
         {% endif %}
@@ -54,5 +71,7 @@
       </ul>
     {% endif %}
     </div>
+
 </section>
+
 {% endblock %}
