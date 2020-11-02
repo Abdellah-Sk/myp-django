@@ -826,15 +826,16 @@ section .all_projects {
       margin: 0;
       width: 350px;
       display: flex;
-      flex-direction: column; } }
+      flex-direction: column;
+      margin-top: 20%; } }
   section .all_projects .box_project {
+    margin-bottom: 4%;
     padding: 2em;
     width: 100%;
     vertical-align: middle;
     display: flex; }
     @media only screen and (max-width: 768px) {
       section .all_projects .box_project {
-        width: 90%;
         height: auto;
         padding: auto;
         display: flex;
@@ -870,8 +871,7 @@ section .all_projects {
       section .all_projects .box_project .projet_contents .projet_name {
         color: white;
         font-size: 1.5em;
-        font-weight: 700;
-        margin-top: 0; }
+        font-weight: 700; }
       section .all_projects .box_project .projet_contents .projet_description {
         color: white;
         font-size: 0.8em; }
@@ -886,14 +886,15 @@ section .all_projects {
       font-weight: 700;
       opacity: 0.5;
       z-index: 3;
-      left: 60%;
-      margin-top: 19%;
+      left: 65%;
+      margin-top: 21%;
       position: absolute; }
       @media only screen and (max-width: 768px) {
         section .all_projects .box_project .projet_techno {
           font-size: 50px;
           margin-bottom: 35%;
-          text-align: center; } }
+          text-align: center;
+          left: 17%; } }
   section .all_projects .right img {
     margin-left: 45%; }
     @media only screen and (max-width: 768px) {
@@ -904,6 +905,15 @@ section .all_projects {
     @media only screen and (max-width: 768px) {
       section .all_projects .right .projet_contents {
         margin-left: 0; } }
+  section .all_projects .right .projet_techno {
+    left: 15%;
+    margin-top: 2%; }
+    @media only screen and (max-width: 768px) {
+      section .all_projects .right .projet_techno {
+        font-size: 50px;
+        margin-bottom: 20%;
+        text-align: start;
+        left: 17%; } }
 
 section .container_pagination {
   width: 100%;
